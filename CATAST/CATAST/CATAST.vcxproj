@@ -156,11 +156,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="source\ApplicationMain.cpp" />
+    <ClCompile Include="source\EditorButton.cpp" />
+    <ClCompile Include="source\ModeEditor.cpp" />
     <ClCompile Include="source\ModeTest.cpp" />
     <ClCompile Include="source\TestObject.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\ApplicationMain.h" />
+    <ClInclude Include="source\EditorButton.h" />
+    <ClInclude Include="source\ModeEditor.h" />
     <ClInclude Include="source\ModeTest.h" />
     <ClInclude Include="source\TestObject.h" />
   </ItemGroup>

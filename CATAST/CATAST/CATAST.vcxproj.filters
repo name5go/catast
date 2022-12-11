@@ -19,6 +19,18 @@
     <Filter Include="Object\TestObject">
       <UniqueIdentifier>{c9283603-042d-4a02-92b9-b1c05633ffad}</UniqueIdentifier>
     </Filter>
+    <Filter Include="StageEditor">
+      <UniqueIdentifier>{60f99d55-8a6e-43c5-a126-4ddb0a0c04b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StageEditor\Object">
+      <UniqueIdentifier>{36645df3-bd03-4cbc-9b33-7f654623b28e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StageEditor\ModeEdit">
+      <UniqueIdentifier>{48fcd095-64d5-4175-8b29-bc87e0f37e8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StageEditor\Object\EditorButton">
+      <UniqueIdentifier>{f8a1aa6b-d28d-42c8-a881-31d2baa9de2e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\ApplicationMain.cpp">
@@ -30,6 +42,12 @@
     <ClCompile Include="source\TestObject.cpp">
       <Filter>Object\TestObject</Filter>
     </ClCompile>
+    <ClCompile Include="source\ModeEditor.cpp">
+      <Filter>StageEditor\ModeEdit</Filter>
+    </ClCompile>
+    <ClCompile Include="source\EditorButton.cpp">
+      <Filter>StageEditor\Object\EditorButton</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\ApplicationMain.h">
@@ -40,6 +58,12 @@
     </ClInclude>
     <ClInclude Include="source\TestObject.h">
       <Filter>Object\TestObject</Filter>
+    </ClInclude>
+    <ClInclude Include="source\ModeEditor.h">
+      <Filter>StageEditor\ModeEdit</Filter>
+    </ClInclude>
+    <ClInclude Include="source\EditorButton.h">
+      <Filter>StageEditor\Object\EditorButton</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
