@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Application">
+      <UniqueIdentifier>{fc684731-f9b1-49d8-87dc-c6e21d0d0349}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\ApplicationMain">
+      <UniqueIdentifier>{7d32f8a4-e2cb-48d2-a672-eff6453468a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mode">
+      <UniqueIdentifier>{82688246-eb9e-4456-9890-53f43020fb8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mode\ModeTest">
+      <UniqueIdentifier>{fbcf7b66-9537-438d-9f9c-61f7989bd65f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object">
+      <UniqueIdentifier>{8526c56e-ac50-49ca-b12d-080db8c26981}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\TestObject">
+      <UniqueIdentifier>{c9283603-042d-4a02-92b9-b1c05633ffad}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\ApplicationMain.cpp">
+      <Filter>Application\ApplicationMain</Filter>
+    </ClCompile>
+    <ClCompile Include="source\ModeTest.cpp">
+      <Filter>Mode\ModeTest</Filter>
+    </ClCompile>
+    <ClCompile Include="source\TestObject.cpp">
+      <Filter>Object\TestObject</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\ApplicationMain.h">
+      <Filter>Application\ApplicationMain</Filter>
+    </ClInclude>
+    <ClInclude Include="source\ModeTest.h">
+      <Filter>Mode\ModeTest</Filter>
+    </ClInclude>
+    <ClInclude Include="source\TestObject.h">
+      <Filter>Object\TestObject</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

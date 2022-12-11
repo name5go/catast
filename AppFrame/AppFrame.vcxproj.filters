@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Application">
+      <UniqueIdentifier>{4ca63305-d083-453b-88a9-706f0a1ac180}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ModeServer">
+      <UniqueIdentifier>{f65d1d8e-b785-4c0b-a849-085fd92b4b60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CFile">
+      <UniqueIdentifier>{8fbd5843-f112-4047-a7f8-83460621436b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input">
+      <UniqueIdentifier>{e0207075-559e-4ed2-bc98-76824f23b563}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object">
+      <UniqueIdentifier>{ec7580b2-0476-4287-a4d5-af9896a8b16c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Math">
+      <UniqueIdentifier>{9ee1388b-c70f-45d4-93f6-09e64a54f401}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource">
+      <UniqueIdentifier>{6cbf5279-3510-41ab-a7a8-3d4939a2d0fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utillity">
+      <UniqueIdentifier>{eb9927ef-d4b7-4ca0-a36e-44dd263f6d5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource\ImageServer">
+      <UniqueIdentifier>{3cd2180c-f6a9-4a9d-aca4-e88d88551649}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource\ModelServer">
+      <UniqueIdentifier>{50c64edb-d85f-49c5-9eb7-56d54a7e6513}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\ObjectServer">
+      <UniqueIdentifier>{c7368be9-6a6a-4829-959a-a87974c3e264}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\ObjectBase">
+      <UniqueIdentifier>{fe46a850-67d1-49b1-b241-beb33af923b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input\Input">
+      <UniqueIdentifier>{73deec9b-8322-4e82-99ee-52a48b500e98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ModeBase">
+      <UniqueIdentifier>{9985990d-1c64-4863-a326-e66ecebee5a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utillity\AABB">
+      <UniqueIdentifier>{c7cf2569-7cf9-43c5-b5af-03a368fc6b5d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component">
+      <UniqueIdentifier>{721276cd-7724-48d5-a3d0-02d892293439}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\MV1Component">
+      <UniqueIdentifier>{3c8324ae-e3b8-47be-a858-4d4f32656056}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\AABBComponent">
+      <UniqueIdentifier>{04194e5c-9704-4a49-8482-39deb06586dc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\Application\ApplicationBase.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Application\WinMain.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Mode\ModeServer.cpp">
+      <Filter>ModeServer</Filter>
+    </ClCompile>
+    <ClCompile Include="source\CFile\CFile.cpp">
+      <Filter>CFile</Filter>
+    </ClCompile>
+    <ClCompile Include="source\AppFrameMath.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Object\ObjectBase.cpp">
+      <Filter>Object\ObjectBase</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Resource\ImageServer.cpp">
+      <Filter>Resource\ImageServer</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Resource\ModelServer.cpp">
+      <Filter>Resource\ModelServer</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Utility\AABB.cpp">
+      <Filter>Utillity\AABB</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Object\ObjectServer.cpp">
+      <Filter>Object\ObjectServer</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Object\ComponentBase.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Object\MV1Component.cpp">
+      <Filter>Component\MV1Component</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Input\InputManager.cpp">
+      <Filter>Input\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Object\AABBComponent.cpp">
+      <Filter>Component\AABBComponent</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Mode\ModeBase.cpp">
+      <Filter>ModeBase</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\Application\ApplicationBase.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Application\UtilMacro.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="source\appframe.h" />
+    <ClInclude Include="source\Mode\ModeServer.h">
+      <Filter>ModeServer</Filter>
+    </ClInclude>
+    <ClInclude Include="source\CFile\CFile.h">
+      <Filter>CFile</Filter>
+    </ClInclude>
+    <ClInclude Include="source\AppFrameMath.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Object\ObjectBase.h">
+      <Filter>Object\ObjectBase</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Resource\ImageServer.h">
+      <Filter>Resource\ImageServer</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Resource\ModelServer.h">
+      <Filter>Resource\ModelServer</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Utility\AABB.h">
+      <Filter>Utillity\AABB</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Object\ObjectServer.h">
+      <Filter>Object\ObjectServer</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Object\ComponentBase.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Object\MV1Component.h">
+      <Filter>Component\MV1Component</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Input\InputManager.h">
+      <Filter>Input\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Object\AABBComponent.h">
+      <Filter>Component\AABBComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Mode\ModeBase.h">
+      <Filter>ModeBase</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
