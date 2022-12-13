@@ -38,57 +38,67 @@
 		virtual bool GetMouseLeft(InputState state) { return GetMouseButton(MOUSE_INPUT_LEFT, state); }
 		virtual bool GetMouseMiddle(InputState state) { return GetMouseButton(MOUSE_INPUT_MIDDLE, state); }
 		virtual bool GetMouseRight(InputState state) { return GetMouseButton(MOUSE_INPUT_RIGHT, state); }
-		virtual bool GetKeyUp(InputState state, int controllerNumber=0) { return GetKeyButton(KEY_INPUT_UP, state, controllerNumber); }
-		virtual bool GetKeyDown(InputState state, int controllerNumber=0) { return GetKeyButton(KEY_INPUT_DOWN, state, controllerNumber); }
-		virtual bool GetKeyLeft(InputState state, int controllerNumber=0) { return GetKeyButton(KEY_INPUT_LEFT, state, controllerNumber); }
-		virtual bool GetKeyRight(InputState state, int controllerNumber=0) { return GetKeyButton(KEY_INPUT_RIGHT, state, controllerNumber); }
 
-		virtual bool GetKeyZ(InputState state, int controllerNumber = 0) { return GetKeyButton(PAD_INPUT_1, state, controllerNumber); }
-		virtual bool GetKeyX(InputState state, int controllerNumber = 0) { return GetKeyButton(PAD_INPUT_2, state, controllerNumber); }
-		virtual bool GetKeyC(InputState state, int controllerNumber = 0) { return GetKeyButton(PAD_INPUT_3, state, controllerNumber); }
-		virtual bool GetKeyA(InputState state, int controllerNumber = 0) { return GetKeyButton(PAD_INPUT_4, state, controllerNumber); }
-		virtual bool GetKeyS(InputState state, int controllerNumber = 0) { return GetKeyButton(PAD_INPUT_5, state, controllerNumber); }
-		virtual bool GetKeyD(InputState state, int controllerNumber = 0) { return GetKeyButton(PAD_INPUT_6, state, controllerNumber); }
-		virtual bool GetKeyQ(InputState state, int controllerNumber = 0) { return GetKeyButton(PAD_INPUT_8, state, controllerNumber); }
-		virtual bool GetKeyW(InputState state, int controllerNumber = 0) { return GetKeyButton(PAD_INPUT_8, state, controllerNumber); }
-		virtual bool GetKeyESC(InputState state, int controllerNumber = 0) { return GetKeyButton(PAD_INPUT_9, state, controllerNumber); }
-		virtual bool GetKeySPACE(InputState state, int controllerNumber = 0) { return GetKeyButton(PAD_INPUT_10, state, controllerNumber); }
+		virtual bool GetKeyUp(InputState state) { return GetKeyButton(KEY_INPUT_UP, state); }
+		virtual bool GetKeyDown(InputState state) { return GetKeyButton(KEY_INPUT_DOWN, state ); }
+		virtual bool GetKeyLeft(InputState state) { return GetKeyButton(KEY_INPUT_LEFT, state ); }
+		virtual bool GetKeyRight(InputState state) { return GetKeyButton(KEY_INPUT_RIGHT, state ); }
+		virtual bool GetKeyZ(InputState state) { return GetKeyButton(KEY_INPUT_Z, state); }
+		virtual bool GetKeyX(InputState state) { return GetKeyButton(KEY_INPUT_X, state); }
+		virtual bool GetKeyC(InputState state) { return GetKeyButton(KEY_INPUT_C, state); }
+		virtual bool GetKeyV(InputState state) { return GetKeyButton(KEY_INPUT_V, state); }
+		virtual bool GetKeyA(InputState state) { return GetKeyButton(KEY_INPUT_A, state); }
+		virtual bool GetKeyS(InputState state) { return GetKeyButton(KEY_INPUT_S, state); }
+		virtual bool GetKeyD(InputState state) { return GetKeyButton(KEY_INPUT_D, state); }
+		virtual bool GetKeyQ(InputState state) { return GetKeyButton(KEY_INPUT_Q, state); }
+		virtual bool GetKeyW(InputState state) { return GetKeyButton(KEY_INPUT_W, state); }
+		virtual bool GetKeyESC(InputState state) { return GetKeyButton(KEY_INPUT_ESCAPE, state); }
+		virtual bool GetKeySPACE(InputState state) { return GetKeyButton(KEY_INPUT_SPACE, state); }
+		virtual bool GetKeyDelete(InputState state) { return GetKeyButton(KEY_INPUT_DELETE, state); }
+		virtual bool GetKeyControlLeft(InputState state) { return GetKeyButton(KEY_INPUT_LCONTROL, state); }
 
-		virtual bool GetPadDown(InputState state, int controllerNumber = 0) { return GetKeyButton(PAD_INPUT_DOWN, state, controllerNumber); }
-		virtual bool GetPadLeft(InputState state, int controllerNumber = 0) { return GetKeyButton(PAD_INPUT_LEFT, state, controllerNumber); }
-		virtual bool GetPadRight(InputState state, int controllerNumber = 0) { return GetKeyButton(PAD_INPUT_RIGHT, state, controllerNumber); }
-		virtual bool GetPadUp(InputState state, int controllerNumber = 0) { return GetKeyButton(PAD_INPUT_UP, state, controllerNumber); }
-		virtual bool GetPadX(InputState state, int controllerNumber = 0) { return GetKeyButton(PAD_INPUT_1, state, controllerNumber); }
-		virtual bool GetPadY(InputState state, int controllerNumber = 0) { return GetKeyButton(PAD_INPUT_2, state, controllerNumber); }
-		virtual bool GetPadA(InputState state, int controllerNumber = 0) { return GetKeyButton(PAD_INPUT_3, state, controllerNumber); }
-		virtual bool GetPadB(InputState state, int controllerNumber = 0) { return GetKeyButton(PAD_INPUT_4, state, controllerNumber); }
-		virtual bool GetPadL1(InputState state, int controllerNumber = 0) { return GetKeyButton(PAD_INPUT_5, state, controllerNumber); }
-		virtual bool GetPadR1(InputState state, int controllerNumber = 0) { return GetKeyButton(PAD_INPUT_6, state, controllerNumber); }
-		virtual bool GetPadL2(InputState state, int controllerNumber = 0) { return GetKeyButton(PAD_INPUT_8, state, controllerNumber); }
-		virtual bool GetPadR2(InputState state, int controllerNumber = 0) { return GetKeyButton(PAD_INPUT_8, state, controllerNumber); }
+		virtual bool GetPadDown(InputState state, int controllerNumber = 0) { return GetPadButton(PAD_INPUT_DOWN, state, controllerNumber); }
+		virtual bool GetPadLeft(InputState state, int controllerNumber = 0) { return GetPadButton(PAD_INPUT_LEFT, state, controllerNumber); }
+		virtual bool GetPadRight(InputState state, int controllerNumber = 0) { return GetPadButton(PAD_INPUT_RIGHT, state, controllerNumber); }
+		virtual bool GetPadUp(InputState state, int controllerNumber = 0) { return GetPadButton(PAD_INPUT_UP, state, controllerNumber); }
+		virtual bool GetPadX(InputState state, int controllerNumber = 0) { return GetPadButton(PAD_INPUT_1, state, controllerNumber); }
+		virtual bool GetPadY(InputState state, int controllerNumber = 0) { return GetPadButton(PAD_INPUT_2, state, controllerNumber); }
+		virtual bool GetPadA(InputState state, int controllerNumber = 0) { return GetPadButton(PAD_INPUT_3, state, controllerNumber); }
+		virtual bool GetPadB(InputState state, int controllerNumber = 0) { return GetPadButton(PAD_INPUT_4, state, controllerNumber); }
+		virtual bool GetPadL1(InputState state, int controllerNumber = 0) { return GetPadButton(PAD_INPUT_5, state, controllerNumber); }
+		virtual bool GetPadR1(InputState state, int controllerNumber = 0) { return GetPadButton(PAD_INPUT_6, state, controllerNumber); }
+		virtual bool GetPadL2(InputState state, int controllerNumber = 0) { return GetPadButton(PAD_INPUT_8, state, controllerNumber); }
+		virtual bool GetPadR2(InputState state, int controllerNumber = 0) { return GetPadButton(PAD_INPUT_8, state, controllerNumber); }
 		//Lスティック押し込み
-		virtual bool GetPadL3(InputState state, int controllerNumber = 0) { return GetKeyButton(PAD_INPUT_9, state, controllerNumber); }
+		virtual bool GetPadL3(InputState state, int controllerNumber = 0) { return GetPadButton(PAD_INPUT_9, state, controllerNumber); }
 		//Rスティック押し込み
-		virtual bool GetPadR3(InputState state, int controllerNumber = 0) { return GetKeyButton(PAD_INPUT_10, state, controllerNumber); }
-		virtual bool GetPadBack(InputState state, int controllerNumber = 0) { return GetKeyButton(PAD_INPUT_11, state, controllerNumber); }
-		virtual bool GetPadStart(InputState state, int controllerNumber = 0) { return GetKeyButton(PAD_INPUT_12, state, controllerNumber); }
+		virtual bool GetPadR3(InputState state, int controllerNumber = 0) { return GetPadButton(PAD_INPUT_10, state, controllerNumber); }
+		virtual bool GetPadBack(InputState state, int controllerNumber = 0) { return GetPadButton(PAD_INPUT_11, state, controllerNumber); }
+		virtual bool GetPadStart(InputState state, int controllerNumber = 0) { return GetPadButton(PAD_INPUT_12, state, controllerNumber); }
 
 		//マウス位置取得
 		std::pair<int, int> GetMouseXY() { return { _mouseX,_mouseY }; };
 		int GetMouseX() { return _mouseX; }
 		int GetMouseY() { return _mouseY; }
+		std::pair<int, int> GetMouseDeltaXY() { return {  _mouseX- _mouseOldX, _mouseY- _mouseOldY }; };
+		int GetMouseDeltaX() { return _mouseX - _mouseOldX; }
+		int GetMouseDeltaY() { return _mouseY - _mouseOldY; }
+		int GetMouseWheel() { return _mouseWheel; }
 		//マウス位置設定
 		void SetMouseXY(std::pair<int, int> set) { _mouseX = set.first; _mouseY = set.second; }
 		void SetMouseX(int set) { _mouseX = set; }
 		void SetMouseY(int set) { _mouseY = set; }
 
 	protected:
+		char _keyboardKeys[256], _oldKeyboardKeys[256];
 		int _mouseX, _mouseY;
+		int _mouseOldX, _mouseOldY;
 		int _mouse, _oldMouse;
+		int _mouseWheel;
 
-		std::vector<int> _keys, _oldKeys;
-		std::vector<int> _x;
-		std::vector<int> _y;
+		std::vector<int> _padKeys, _oldPadKeys;
+		std::vector<int> _padX;
+		std::vector<int> _padY;
 
 		static constexpr std::array<int, 16> _controllerList = {
 			DX_INPUT_KEY_PAD1,
@@ -110,5 +120,6 @@
 		};
 
 		bool GetMouseButton(int key, InputState state);
-		bool GetKeyButton(int key, InputState state, int controllerNumber);
+		bool GetKeyButton(int key, InputState state);
+		bool GetPadButton(int key, InputState state, int controllerNumber);
 	};

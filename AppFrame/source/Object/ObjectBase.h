@@ -33,6 +33,10 @@ public:
 	void SetPosition(VECTOR position) { _position = position; }
 	void SetRotation(VECTOR rotation) { _rotation = rotation; }
 	void SetScale(VECTOR scale) { _scale = scale; }
+	MATRIX GetPositonMatrix() { return _positionMatrix; }
+	MATRIX GetRotationMatrix() {return _rotationMatrix;}
+	MATRIX GetScaleMatrix() { return _scaleMatrix; }
+	MATRIX GetTransform() { return _transrom; }
 	virtual bool IsDead() { return _dead; }
 	virtual void Dead() { _dead = true; }
 
@@ -82,6 +86,11 @@ public:
 		return false;
 	}
 
+	/**  \brief 全てのオブジェクトへメッセージを送信*/
+	virtual void SendMessageAllObjects(std::string message);
+	/**  \brief オブジェクトへメッセージを送信*/
+	virtual void SendMessageOneObject(ObjectBase* destination,std::string message);
+
 	ModeBase* GetMode() { return _mode; }
 	void SetMode(ModeBase* mode) { _mode = mode; }
 protected:
@@ -94,6 +103,10 @@ protected:
 	VECTOR _position;
 	VECTOR _rotation;
 	VECTOR _scale;
+	MATRIX _positionMatrix;
+	MATRIX _rotationMatrix;
+	MATRIX _scaleMatrix;
+	MATRIX _transrom;
 	bool _dead;
 
 	std::unordered_map<std::type_index, std::unique_ptr<ComponentBase>> _components;
