@@ -1,36 +1,25 @@
 /*****************************************************************//**
  * \file   ModeTest.cpp
- * \brief  ƒ‚[ƒh‚ÌÀ‘•—á‚Å‚·BƒQ[ƒ€’†‚Å‚Íg—p‚µ‚È‚¢B
+ * \brief  ãƒ¢ãƒ¼ãƒ‰ã®å®Ÿè£…ä¾‹ã§ã™ã€‚ã‚²ãƒ¼ãƒ ä¸­ã§ã¯ä½¿ç”¨ã—ãªã„ã€‚
  *
- * \author “y‹«‘¾˜Y
- * \date   December 2022
+ * \author åœŸå±…å°†å¤ªéƒ
+ * \date   December 2022a
  *********************************************************************/
-#include "ModeTest.h"
-#include "TestObject.h"
-#include "EditorUICreater.h"
 
- //Å‰‚Éˆê“x‚¾‚¯©“®“I‚ÉŒÄ‚Î‚ê‚é
+
+ //æœ€åˆã«ä¸€åº¦ã ã‘è‡ªå‹•çš„ã«å‘¼ã°ã‚Œã‚‹
 bool ModeTest::Initialize() {
 	if (!ModeBase::Initialize()) { return false; }
-	////ƒeƒXƒgƒIƒuƒWƒFƒNƒg‚Ì’Ç‰Á
-	//_objectServer->Add(std::make_unique<TestObject>());
-	
 
-	EditorUICreater editorCreater;
-	editorCreater.CreateUI(*_objectServer);
-
-	SetUseZBuffer3D(true);
-	SetWriteZBuffer3D(true);
-
-	//ƒJƒƒ‰‚ÌƒZƒbƒg
+	//ã‚«ãƒ¡ãƒ©ã®ã‚»ãƒƒãƒˆ
 	SetCameraPositionAndTarget_UpVecY({ 0.0f,50.0f,-150.0f }, { 0.0f,50.0f,0.0f });
-	//ƒ‰ƒCƒg‚Ìİ’è
+	//ãƒ©ã‚¤ãƒˆã®è¨­å®š
 	//ChangeLightTypeDir({ 0.1f,1.0f,0.5f });
 	SetLightDifColor({2.0f, 2.0f, 2.0f, 0.0f});
 	return true;
 }
 
-//íœ‚·‚é‚Éˆê“x‚¾‚¯©“®“I‚ÉŒÄ‚Î‚ê‚é
+//å‰Šé™¤ã™ã‚‹æ™‚ã«ä¸€åº¦ã ã‘è‡ªå‹•çš„ã«å‘¼ã°ã‚Œã‚‹
 bool ModeTest::Terminate() {
 	ModeBase::Terminate();
 	return true;
