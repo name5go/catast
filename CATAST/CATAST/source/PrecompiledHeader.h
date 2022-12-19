@@ -12,6 +12,7 @@
 
 //ライブラリ
 #include <sstream>
+#include <functional>
 
 //メイン
 #include "ApplicationMain.h"
@@ -21,6 +22,10 @@
 #include "ModeTest.h"
 //--Modes
 #include "ModeInGame.h"
+
+//Editor
+#include "ModeEditor.h"
+#include "EditorButton.h"
 
 //オブジェクト
 //--テンプレ
