@@ -6,8 +6,6 @@
  * \date   December 2022
  *********************************************************************/
 #pragma once
-#include "appframe.h"
-#include <functional>
 
 class EditorButton : public ObjectBase
 {
