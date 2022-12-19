@@ -1,3 +1,5 @@
+#include "ApplicationMain.h"
+#include "ModeTest.h"
 
 // À‘Ì
 ApplicationMain g_oApplicationMain;
@@ -6,7 +8,7 @@ bool ApplicationMain::Initialize(HINSTANCE hInstance) {
 	if (!ApplicationBase::Initialize(hInstance)) { return false; }
 
 	// ƒ‚[ƒh‚Ì“o˜^
-	ModeServer::GetInstance()->Add(std::make_unique<ModeInGame>(), 1, "test");
+	ModeServer::GetInstance()->Add(std::make_unique<ModeTest>(), 1, "test");
 	return true;
 }
 

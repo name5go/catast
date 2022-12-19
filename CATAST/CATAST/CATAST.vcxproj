@@ -101,9 +101,6 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <PrecompiledHeaderFile>PrecompiledHeader.h</PrecompiledHeaderFile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <ForcedIncludeFiles>PrecompiledHeader.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -119,9 +116,6 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <PrecompiledHeaderFile>PrecompiledHeader.h</PrecompiledHeaderFile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <ForcedIncludeFiles>PrecompiledHeader.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -137,9 +131,6 @@
       <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <PrecompiledHeaderFile>PrecompiledHeader.h</PrecompiledHeaderFile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <ForcedIncludeFiles>PrecompiledHeader.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -155,9 +146,6 @@
       <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <PrecompiledHeaderFile>PrecompiledHeader.h</PrecompiledHeaderFile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <ForcedIncludeFiles>PrecompiledHeader.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -168,31 +156,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="source\ApplicationMain.cpp" />
-    <ClCompile Include="source\Camera.cpp" />
-    <ClCompile Include="source\LevelBase.cpp" />
-    <ClCompile Include="source\ModeInGame.cpp" />
-    <ClCompile Include="source\EditorButton.cpp" />
-    <ClCompile Include="source\ModeEditor.cpp" />
     <ClCompile Include="source\ModeTest.cpp" />
-    <ClCompile Include="source\Player.cpp" />
-    <ClCompile Include="source\PrecompiledHeader.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
-    </ClCompile>
     <ClCompile Include="source\TestObject.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\ApplicationMain.h" />
-    <ClInclude Include="source\Camera.h" />
-    <ClInclude Include="source\LevelBase.h" />
-    <ClInclude Include="source\ModeInGame.h" />
-    <ClInclude Include="source\EditorButton.h" />
-    <ClInclude Include="source\ModeEditor.h" />
     <ClInclude Include="source\ModeTest.h" />
-    <ClInclude Include="source\Player.h" />
-    <ClInclude Include="source\PrecompiledHeader.h" />
     <ClInclude Include="source\TestObject.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

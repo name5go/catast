@@ -1,19 +1,19 @@
 /*****************************************************************//**
  * \file   AABBComponent.h
- * \brief  親オブジェクトに追従する2DのAABB
+ * \brief  親オブジェクトに追従するAABB
  * 
  * \author 土居将太郎
  * \date   November 2022
  *********************************************************************/
 #pragma once
 #include "ComponentBase.h"
-#include "../Utility/AABB2D.h"
+#include "../Utility/AABB.h"
 
-	class AABB2DComponent :public ComponentBase
+	class AABBComponent :public ComponentBase
 	{
 	public:
-		AABB2DComponent();
-		~AABB2DComponent();
+		AABBComponent();
+		~AABBComponent();
 		bool Init()override;
 		void Update()override;
 		void Render()override;
@@ -28,6 +28,5 @@
 		bool _movable;
 		float _sizeX, _sizeY;
 		AABB _collision;
-		bool _rootPositionCenter;
 		bool _XZaxis;
 	};

@@ -1,4 +1,4 @@
-#include "AABB2D.h"
+#include "AABB.h"
 
 	bool Intersect(const AABB& r1, const AABB& r2)
 	{

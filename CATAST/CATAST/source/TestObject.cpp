@@ -5,7 +5,8 @@
  * \author “y‹«‘¾˜Y
  * \date   December 2022
  *********************************************************************/
-
+#include "TestObject.h"
+#include <sstream>
 
 //Å‰‚Éˆê“x‚¾‚¯©“®“I‚ÉŒÄ‚Î‚ê‚é
 void TestObject::Init()
