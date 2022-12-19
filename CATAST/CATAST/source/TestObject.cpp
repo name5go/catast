@@ -50,3 +50,5 @@ void TestObject::Render()
 	ss << "左右キーで移動　Aキーでアニメーション再生";
 	DrawString(0, 0, ss.str().c_str(), GetColor(255, 255, 255));
 }
+
+//テストです
