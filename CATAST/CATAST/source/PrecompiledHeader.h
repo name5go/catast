@@ -7,6 +7,7 @@
  *********************************************************************/
 #pragma once
 
+
 #include"appframe.h"
 
 //ƒ‰ƒCƒuƒ‰ƒŠ
@@ -16,3 +17,5 @@
 #include "Player.h"
 #include "Camera.h"
 #include "ModeInGame.h"
+
+#include "TestObject.h"

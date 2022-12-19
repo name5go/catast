@@ -6,7 +6,6 @@
  * \date   December 2022
  *********************************************************************/
 #pragma once
-#include "PrecompiledHeader.h"
 
 class TestObject : public ObjectBase
 {

@@ -6,10 +6,6 @@
  * \date   December 2022
  *********************************************************************/
 
-#include "PrecompiledHeader.h"
-#include "TestObject.h"
-
-
 
 //Å‰‚Éˆê“x‚¾‚¯©“®“I‚ÉŒÄ‚Î‚ê‚é
 void TestObject::Init()

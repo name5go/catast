@@ -5,8 +5,6 @@
  * \author ‚ß‚´‚µ
  * \date   December 2022
  *********************************************************************/
-#include "PrecompiledHeader.h"
-#include "Camera.h"
 
 
 void Camera::Init()
