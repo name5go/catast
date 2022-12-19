@@ -170,14 +170,14 @@
     <ClCompile Include="source\Input\InputManager.cpp" />
     <ClCompile Include="source\Mode\ModeBase.cpp" />
     <ClCompile Include="source\Mode\ModeServer.cpp" />
-    <ClCompile Include="source\Object\AABBComponent.cpp" />
+    <ClCompile Include="source\Object\AABB2DComponent.cpp" />
     <ClCompile Include="source\Object\ComponentBase.cpp" />
     <ClCompile Include="source\Object\MV1Component.cpp" />
     <ClCompile Include="source\Object\ObjectBase.cpp" />
     <ClCompile Include="source\Object\ObjectServer.cpp" />
     <ClCompile Include="source\Resource\ImageServer.cpp" />
     <ClCompile Include="source\Resource\ModelServer.cpp" />
-    <ClCompile Include="source\Utility\AABB.cpp" />
+    <ClCompile Include="source\Utility\AABB2D.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\appframe.h" />
@@ -188,14 +188,14 @@
     <ClInclude Include="source\Input\InputManager.h" />
     <ClInclude Include="source\Mode\ModeBase.h" />
     <ClInclude Include="source\Mode\ModeServer.h" />
-    <ClInclude Include="source\Object\AABBComponent.h" />
+    <ClInclude Include="source\Object\AABB2DComponent.h" />
     <ClInclude Include="source\Object\ComponentBase.h" />
     <ClInclude Include="source\Object\MV1Component.h" />
     <ClInclude Include="source\Object\ObjectBase.h" />
     <ClInclude Include="source\Object\ObjectServer.h" />
     <ClInclude Include="source\Resource\ImageServer.h" />
     <ClInclude Include="source\Resource\ModelServer.h" />
-    <ClInclude Include="source\Utility\AABB.h" />
+    <ClInclude Include="source\Utility\AABB2D.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

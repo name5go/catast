@@ -1,38 +1,39 @@
 /*****************************************************************//**
- * \file   AABBComponent.cpp
- * \brief  親オブジェクトに追従するAABB
+ * \file   AABB2DComponent.cpp
+ * \brief  親オブジェクトに追従する2DのAABB
  *
  * \author 土居将太郎
  * \date   November 2022
  *********************************************************************/
-#include "AABBComponent.h"
+#include "AABB2DComponent.h"
 #include "ObjectBase.h"
 
-AABBComponent::AABBComponent()
+AABB2DComponent::AABB2DComponent()
 	:_sizeX{ 100 }
 	, _sizeY{ 100 }
 	, _movable{ true }
 	, _XZaxis{ false }
+	, _rootPositionCenter{ false }
 {
 }
-AABBComponent::~AABBComponent()
+AABB2DComponent::~AABB2DComponent()
 {
 }
-bool AABBComponent::Init()
+bool AABB2DComponent::Init()
 {
 	UpdateCollision();
 	return true;
 }
-void AABBComponent::Update()
+void AABB2DComponent::Update()
 {
 	if (_movable) {
 		UpdateCollision();
 	}
 }
-void AABBComponent::Render()
+void AABB2DComponent::Render()
 {
 }
-void AABBComponent::Debug()
+void AABB2DComponent::Debug()
 {
 	auto pos1 = _parent->GetPosition();
 	pos1.x -= _sizeX / 2;
@@ -60,16 +61,21 @@ void AABBComponent::Debug()
 	//DrawPolygonIndexed3D(vertex, 4, indices, 2, DX_NONE_GRAPH, false);
 	SetDrawBlendMode(DX_BLENDMODE_NOBLEND, 255);
 }
-void AABBComponent::UpdateCollision()
+void AABB2DComponent::UpdateCollision()
 {
-	auto Position = _parent->GetPosition();
+	auto position = _parent->GetPosition();
+	/*オブジェクトの位置取得*/
+	Vector2 pos{ static_cast<double>(position.x),static_cast<double>(position.y) };
 	if (_XZaxis) {
-		_collision.min = { Position.x - _sizeX / 2.0,Position.z - _sizeY / 2.0 };
-		_collision.max = { Position.x + _sizeX / 2.0,Position.z + _sizeY / 2.0 };
+		Vector2 pos = { static_cast<double>(position.x),static_cast<double>(position.z) };
 	}
-	else {
-		_collision.min = { Position.x - _sizeX / 2.0,Position.y - _sizeY / 2.0 };
-		_collision.max = { Position.x + _sizeX / 2.0,Position.y + _sizeY / 2.0 };
+	double minOffset{0.0};
+	double maxOffset{ 1.0 };
+	if (_rootPositionCenter) {
+		double minOffset = 0.5;
+		double maxOffset = 0.5;
 	}
 
+	_collision.min = { pos.x - _sizeX * minOffset,pos.y - _sizeY * maxOffset };
+	_collision.max = { pos.x + _sizeX * minOffset,pos.y+ _sizeY * maxOffset };
 }
