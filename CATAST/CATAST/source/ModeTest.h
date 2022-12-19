@@ -5,7 +5,8 @@
  * \author “y‹«‘¾˜Y
  * \date   December 2022
  *********************************************************************/
-#include "appframe.h"
+#pragma once
+
 
 class ModeTest : public ModeBase
 {

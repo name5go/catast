@@ -5,8 +5,10 @@
  * \author ‚ß‚´‚µ
  * \date   December 2022
  *********************************************************************/
+
 #pragma once
-#include "appframe.h"
+
+
 class LevelBase :
     public ObjectBase
 {

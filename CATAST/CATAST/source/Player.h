@@ -1,5 +1,7 @@
 #pragma once
-#include "appframe.h"
+
+
+
 class Player :
     public ObjectBase
 {

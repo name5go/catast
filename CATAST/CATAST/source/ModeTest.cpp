@@ -5,9 +5,7 @@
  * \author “y‹«‘¾˜Y
  * \date   December 2022a
  *********************************************************************/
-#include "ModeTest.h"
-#include "TestObject.h"
-#include "LevelBase.h"
+
 
  //Å‰‚Éˆê“x‚¾‚¯©“®“I‚ÉŒÄ‚Î‚ê‚é
 bool ModeTest::Initialize() {
