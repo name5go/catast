@@ -1,20 +1,20 @@
 /*****************************************************************//**
- * \file   TestPlayer.cpp
- * \brief  プレイヤークラスの仮置き
+ * \file   Camera.cpp
+ * \brief  カメラ制御
  * 
  * \author めざし
  * \date   December 2022
  *********************************************************************/
-#include "Player.h"
+#include "Camera.h"
 
-void Player::Init()
+void Camera::Init()
 {
 }
 
-void Player::Update(InputManager&)
+void Camera::Update(InputManager&)
 {
 }
 
-void Player::Render()
+void Camera::Render()
 {
 }

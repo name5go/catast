@@ -1,20 +1,21 @@
 /*****************************************************************//**
- * \file   TestPlayer.h
- * \brief  プレイヤークラスの仮置き
+ * \file   ModeInGame.h
+ * \brief  インゲーム部分です
  * 
  * \author めざし
  * \date   December 2022
  *********************************************************************/
-
 #pragma once
 #include "appframe.h"
-class Player :
-    public ObjectBase
+class ModeInGame :
+    public ModeBase
 {
 public:
-  void Init()override;
-  void Update(InputManager&)override;
-  void Render()override;
+	bool Initialize()override;
+	bool Terminate()override;
+	bool Update(InputManager& input)override;
+	bool Render()override;
+	bool Debug()override;
 private:
 
 };
