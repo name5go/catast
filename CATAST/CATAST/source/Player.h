@@ -1,5 +1,8 @@
 #pragma once
+#include "PrecompiledHeader.h"
 #include "appframe.h"
+
+
 class Player :
     public ObjectBase
 {

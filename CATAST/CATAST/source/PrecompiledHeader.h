@@ -1,22 +1,15 @@
 /*****************************************************************//**
- * \file   Camera.cpp
- * \brief  カメラ制御
+ * \file   PreCompiled.h
+ * \brief  プリコンパイルドヘッダー
  * 
  * \author めざし
  * \date   December 2022
  *********************************************************************/
-#include "PrecompiledHeader.h"
+#pragma once
+
+#include"appframe.h"
+
+#include "LevelBase.h"
+#include "Player.h"
 #include "Camera.h"
-
-
-void Camera::Init()
-{
-}
-
-void Camera::Update(InputManager&)
-{
-}
-
-void Camera::Render()
-{
-}
+#include "ModeInGame.h"

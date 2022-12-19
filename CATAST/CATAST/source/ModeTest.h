@@ -5,7 +5,9 @@
  * \author “y‹«‘¾˜Y
  * \date   December 2022
  *********************************************************************/
+#include "PrecompiledHeader.h"
 #include "appframe.h"
+
 
 class ModeTest : public ModeBase
 {

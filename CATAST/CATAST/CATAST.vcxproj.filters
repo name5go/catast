@@ -46,6 +46,9 @@
     <Filter Include="Object\Camera">
       <UniqueIdentifier>{43e7d0ee-932a-464c-a9d9-c75522ab585b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Application\PrecompiledHeader">
+      <UniqueIdentifier>{cb94774c-0327-4598-8d6a-3d1fffe58705}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\ApplicationMain.cpp">
@@ -69,6 +72,9 @@
     <ClCompile Include="source\Camera.cpp">
       <Filter>Object\Camera</Filter>
     </ClCompile>
+    <ClCompile Include="source\PrecompiledHeader.cpp">
+      <Filter>Application\PrecompiledHeader</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\ApplicationMain.h">
@@ -91,6 +97,9 @@
     </ClInclude>
     <ClInclude Include="source\Camera.h">
       <Filter>Object\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="source\PrecompiledHeader.h">
+      <Filter>Application\PrecompiledHeader</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

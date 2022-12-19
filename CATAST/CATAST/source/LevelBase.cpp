@@ -5,7 +5,9 @@
  * \author ‚ß‚´‚µ
  * \date   December 2022
  *********************************************************************/
+#include "PrecompiledHeader.h"
 #include "LevelBase.h"
+
 
 void LevelBase::Init()
 {

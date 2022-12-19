@@ -5,8 +5,12 @@
  * \author ‚ß‚´‚µ
  * \date   December 2022
  *********************************************************************/
+
 #pragma once
-#include "appframe.h"
+#include "PrecompiledHeader.h"
+//#include "appframe.h"
+
+
 class ModeInGame :
     public ModeBase
 {

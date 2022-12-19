@@ -1,4 +1,7 @@
+#include "PrecompiledHeader.h"
 #include "appframe.h"
+
+
 class ApplicationMain : public ApplicationBase
 {
 public:

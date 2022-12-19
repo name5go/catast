@@ -5,10 +5,10 @@
  * \author めざし
  * \date   December 2022
  *********************************************************************/
-#include "ModeInGame.h"
-#include "LevelBase.h"
-#include "Player.h"
-#include "Camera.h"
+#include "PrecompiledHeader.h"
+
+
+
 
 bool ModeInGame::Initialize()
 {
@@ -16,7 +16,7 @@ bool ModeInGame::Initialize()
 	//オブジェクトの追加
 	_objectServer->Add(std::make_unique<LevelBase>());
 
-	_objectServer->Add(std::make_unique<LevelBase>());
+	//_objectServer->Add(std::make_unique<LevelBase>());
 	//カメラのセット
 	SetCameraPositionAndTarget_UpVecY({ 0.0f,50.0f,-150.0f }, { 0.0f,50.0f,0.0f });
 	//ライトの設定
