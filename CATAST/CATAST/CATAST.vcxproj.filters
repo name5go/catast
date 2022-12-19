@@ -19,35 +19,7 @@
     <Filter Include="Object\TestObject">
       <UniqueIdentifier>{c9283603-042d-4a02-92b9-b1c05633ffad}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Object\LevelBase">
-      <UniqueIdentifier>{54bb908a-0cad-4874-989b-73c0f39c6194}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Object\Player">
-      <UniqueIdentifier>{20b292a2-1bd0-4c7c-86a3-4caaad1a3989}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Mode\ModeInGame">
-      <UniqueIdentifier>{98dfbe0e-5d59-421f-95f8-743ef6a67a24}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Mode\ModeTitle">
-      <UniqueIdentifier>{176b8fa4-a361-428f-b864-40fd1d37c500}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Mode\ModeMainMenu">
-      <UniqueIdentifier>{7660d8c0-c31b-4476-9e20-e518c440e5e5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Mode\ModeResult">
-      <UniqueIdentifier>{eb9f50c5-c348-44ad-bc22-299c4789ce8d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Mode\ModeGameOver">
-      <UniqueIdentifier>{aaec30de-f504-433c-bfef-ef0040c2bd42}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Mode\ModeConfig">
-      <UniqueIdentifier>{9adc78cc-6e9c-4644-b7ca-f678b03c0473}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Object\Camera">
-      <UniqueIdentifier>{43e7d0ee-932a-464c-a9d9-c75522ab585b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Application\PrecompiledHeader">
-      <UniqueIdentifier>{cb94774c-0327-4598-8d6a-3d1fffe58705}</UniqueIdentifier>
+
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -60,20 +32,7 @@
     <ClCompile Include="source\TestObject.cpp">
       <Filter>Object\TestObject</Filter>
     </ClCompile>
-    <ClCompile Include="source\LevelBase.cpp">
-      <Filter>Object\LevelBase</Filter>
-    </ClCompile>
-    <ClCompile Include="source\Player.cpp">
-      <Filter>Object\Player</Filter>
-    </ClCompile>
-    <ClCompile Include="source\ModeInGame.cpp">
-      <Filter>Mode\ModeInGame</Filter>
-    </ClCompile>
-    <ClCompile Include="source\Camera.cpp">
-      <Filter>Object\Camera</Filter>
-    </ClCompile>
-    <ClCompile Include="source\PrecompiledHeader.cpp">
-      <Filter>Application\PrecompiledHeader</Filter>
+
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -86,20 +45,7 @@
     <ClInclude Include="source\TestObject.h">
       <Filter>Object\TestObject</Filter>
     </ClInclude>
-    <ClInclude Include="source\LevelBase.h">
-      <Filter>Object\LevelBase</Filter>
-    </ClInclude>
-    <ClInclude Include="source\Player.h">
-      <Filter>Object\Player</Filter>
-    </ClInclude>
-    <ClInclude Include="source\ModeInGame.h">
-      <Filter>Mode\ModeInGame</Filter>
-    </ClInclude>
-    <ClInclude Include="source\Camera.h">
-      <Filter>Object\Camera</Filter>
-    </ClInclude>
-    <ClInclude Include="source\PrecompiledHeader.h">
-      <Filter>Application\PrecompiledHeader</Filter>
+
     </ClInclude>
   </ItemGroup>
 </Project>
