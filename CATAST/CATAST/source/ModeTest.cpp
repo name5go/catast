@@ -7,12 +7,17 @@
  *********************************************************************/
 #include "ModeTest.h"
 #include "TestObject.h"
+#include "EditorButton.h"
 
  //最初に一度だけ自動的に呼ばれる
 bool ModeTest::Initialize() {
 	if (!ModeBase::Initialize()) { return false; }
 	//テストオブジェクトの追加
 	_objectServer->Add(std::make_unique<TestObject>());
+	
+	auto button=std::make_unique<EditorButton>();
+	button->SetText("テスト");
+	_objectServer->Add(std::move(button));
 	//カメラのセット
 	SetCameraPositionAndTarget_UpVecY({ 0.0f,50.0f,-150.0f }, { 0.0f,50.0f,0.0f });
 	//ライトの設定
