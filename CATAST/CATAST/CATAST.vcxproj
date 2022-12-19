@@ -156,13 +156,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="source\ApplicationMain.cpp" />
+    <ClCompile Include="source\LevelBase.cpp" />
     <ClCompile Include="source\ModeTest.cpp" />
     <ClCompile Include="source\TestObject.cpp" />
+    <ClCompile Include="Player.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\ApplicationMain.h" />
+    <ClInclude Include="source\LevelBase.h" />
     <ClInclude Include="source\ModeTest.h" />
     <ClInclude Include="source\TestObject.h" />
+    <ClInclude Include="Player.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

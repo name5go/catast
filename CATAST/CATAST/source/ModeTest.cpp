@@ -3,16 +3,17 @@
  * \brief  モードの実装例です。ゲーム中では使用しない。
  *
  * \author 土居将太郎
- * \date   December 2022
+ * \date   December 2022a
  *********************************************************************/
 #include "ModeTest.h"
 #include "TestObject.h"
+#include "LevelBase.h"
 
  //最初に一度だけ自動的に呼ばれる
 bool ModeTest::Initialize() {
 	if (!ModeBase::Initialize()) { return false; }
 	//テストオブジェクトの追加
-	_objectServer->Add(std::make_unique<TestObject>());
+	_objectServer->Add(std::make_unique<LevelBase>());
 	//カメラのセット
 	SetCameraPositionAndTarget_UpVecY({ 0.0f,50.0f,-150.0f }, { 0.0f,50.0f,0.0f });
 	//ライトの設定

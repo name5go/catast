@@ -19,6 +19,12 @@
     <Filter Include="Object\TestObject">
       <UniqueIdentifier>{c9283603-042d-4a02-92b9-b1c05633ffad}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Object\LevelBase">
+      <UniqueIdentifier>{54bb908a-0cad-4874-989b-73c0f39c6194}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\TestPlayer">
+      <UniqueIdentifier>{20b292a2-1bd0-4c7c-86a3-4caaad1a3989}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\ApplicationMain.cpp">
@@ -30,6 +36,12 @@
     <ClCompile Include="source\TestObject.cpp">
       <Filter>Object\TestObject</Filter>
     </ClCompile>
+    <ClCompile Include="source\LevelBase.cpp">
+      <Filter>Object\LevelBase</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Object\TestPlayer</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\ApplicationMain.h">
@@ -40,6 +52,12 @@
     </ClInclude>
     <ClInclude Include="source\TestObject.h">
       <Filter>Object\TestObject</Filter>
+    </ClInclude>
+    <ClInclude Include="source\LevelBase.h">
+      <Filter>Object\LevelBase</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Object\TestPlayer</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
