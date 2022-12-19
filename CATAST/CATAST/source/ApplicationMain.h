@@ -1,6 +1,4 @@
-
-#pragma once
-
+#include "appframe.h"
 class ApplicationMain : public ApplicationBase
 {
 public:
