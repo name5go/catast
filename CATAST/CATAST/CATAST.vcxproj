@@ -168,11 +168,19 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="source\ApplicationMain.cpp" />
+    <ClCompile Include="source\Dummy.cpp" />
+    <ClCompile Include="source\DummyBlink.cpp" />
+    <ClCompile Include="source\DummyBounce.cpp" />
+    <ClCompile Include="source\DummyWarp.cpp" />
+    <ClCompile Include="source\DummySpike.cpp" />
     <ClCompile Include="source\Camera.cpp" />
     <ClCompile Include="source\LevelBase.cpp" />
     <ClCompile Include="source\ModeInGame.cpp" />
     <ClCompile Include="source\EditorButton.cpp" />
-    <ClCompile Include="source\ModeEditor.cpp" />
+    <ClCompile Include="source\EditorCamera.cpp" />
+    <ClCompile Include="source\EditorSelectMarker.cpp" />
+    <ClCompile Include="source\EditorUICreater.cpp" />
+    <ClCompile Include="source\EditStageSelectWindow.cpp" />
     <ClCompile Include="source\ModeTest.cpp" />
     <ClCompile Include="source\Player.cpp" />
     <ClCompile Include="source\PrecompiledHeader.cpp">
@@ -181,19 +189,36 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="source\ObjectListWindow.cpp" />
+    <ClCompile Include="source\StageDataExporter.cpp" />
+    <ClCompile Include="source\StageDataImporter.cpp" />
     <ClCompile Include="source\TestObject.cpp" />
+    <ClCompile Include="source\XYZLine.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\ApplicationMain.h" />
+    <ClInclude Include="source\Dummy.h" />
+    <ClInclude Include="source\DummyBlink.h" />
+    <ClInclude Include="source\DummyBounce.h" />
+    <ClInclude Include="source\DummyWarp.h" />
+    <ClInclude Include="source\DummySpike.h" />
     <ClInclude Include="source\Camera.h" />
     <ClInclude Include="source\LevelBase.h" />
     <ClInclude Include="source\ModeInGame.h" />
     <ClInclude Include="source\EditorButton.h" />
-    <ClInclude Include="source\ModeEditor.h" />
+    <ClInclude Include="source\EditorCamera.h" />
+    <ClInclude Include="source\EditorSelectMarker.h" />
+    <ClInclude Include="source\EditorUICreater.h" />
+    <ClInclude Include="source\EditStageSelectWindow.h" />
     <ClInclude Include="source\ModeTest.h" />
     <ClInclude Include="source\Player.h" />
     <ClInclude Include="source\PrecompiledHeader.h" />
+    <ClInclude Include="source\ObjectListWindow.h" />
+    <ClInclude Include="source\picojson\picojson.h" />
+    <ClInclude Include="source\StageDataExporter.h" />
+    <ClInclude Include="source\StageDataImporter.h" />
     <ClInclude Include="source\TestObject.h" />
+    <ClInclude Include="source\XYZLine.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

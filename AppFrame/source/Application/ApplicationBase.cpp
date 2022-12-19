@@ -66,6 +66,6 @@ bool ApplicationBase::Render() {
 	_modeServer->RenderFinish();
 	_modeServer->DebugInit();
 	_modeServer->Debug();
-	_modeServer->RenderFinish();
+	_modeServer->DebugFinish();
 	return true;
 }

@@ -55,11 +55,50 @@
     <Filter Include="StageEditor\Object">
       <UniqueIdentifier>{36645df3-bd03-4cbc-9b33-7f654623b28e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="StageEditor\ModeEdit">
-      <UniqueIdentifier>{48fcd095-64d5-4175-8b29-bc87e0f37e8f}</UniqueIdentifier>
-    </Filter>
     <Filter Include="StageEditor\Object\EditorButton">
       <UniqueIdentifier>{f8a1aa6b-d28d-42c8-a881-31d2baa9de2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StageEditor\Object\ObjectListWindow">
+      <UniqueIdentifier>{1874b1ed-d7ed-4524-9bd2-adb2dd77b99b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StageEditor\Object\Dummy">
+      <UniqueIdentifier>{8d6731dd-7b1d-4307-8ed9-039172598962}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="picojson">
+      <UniqueIdentifier>{20e22c66-8935-40b7-8a6b-67941a4840b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StageEditor\Object\EditStageSelectWindow">
+      <UniqueIdentifier>{9aec89bc-9d1d-4235-92c8-025510172c95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StageEditor\EditorUICreater">
+      <UniqueIdentifier>{122386da-61f3-4b86-a42e-91e6e58ef915}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StageEditor\StageDataExporter">
+      <UniqueIdentifier>{e8e90b95-0f8e-4c4f-bce9-63412cb4dc46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StageEditor\StageDataImporter">
+      <UniqueIdentifier>{27cbf0ef-4b45-4c9f-bcf4-238693add137}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StageEditor\Object\EditorCamera">
+      <UniqueIdentifier>{46eccb84-a57e-4965-9b42-a9551839ff88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\XYZLine">
+      <UniqueIdentifier>{266ac7de-0448-4cdf-b237-e52255be40e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StageEditor\Object\EditorSelectMarker">
+      <UniqueIdentifier>{f75dd96c-93cb-4412-ab65-6be20d30b3c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StageEditor\Object\DummySpike">
+      <UniqueIdentifier>{d5f92690-66ef-4079-a99f-7f4f3ea76615}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StageEditor\Object\DummyWarp">
+      <UniqueIdentifier>{5960f6a9-c990-4195-aab5-391296e3e9ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StageEditor\Object\DummyBlink">
+      <UniqueIdentifier>{e6f39abf-d6cd-4523-b005-f8bf18626524}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StageEditor\Object\DummyBounce">
+      <UniqueIdentifier>{2e7bb0ba-e6e2-4776-b1df-981c03061230}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -72,18 +111,15 @@
     <ClCompile Include="source\TestObject.cpp">
       <Filter>Object\TestObject</Filter>
     </ClCompile>
-    <ClCompile Include="source\ModeEditor.cpp">
-      <Filter>StageEditor\ModeEdit</Filter>
-    </ClCompile>
     <ClCompile Include="source\EditorButton.cpp">
       <Filter>StageEditor\Object\EditorButton</Filter>
     </ClCompile>
     <ClCompile Include="source\LevelBase.cpp">
       <Filter>Object\LevelBase</Filter>
     </ClCompile>
-    <ClCompile Include="source\Player.cpp">
+      <ClCompile Include="source\Player.cpp">
       <Filter>Object\Player</Filter>
-    </ClCompile>
+          </ClCompile>
     <ClCompile Include="source\ModeInGame.cpp">
       <Filter>Mode\ModeInGame</Filter>
     </ClCompile>
@@ -92,6 +128,45 @@
     </ClCompile>
     <ClCompile Include="source\PrecompiledHeader.cpp">
       <Filter>Application\PrecompiledHeader</Filter>
+    </ClCompile>
+    <ClCompile Include="source\EditorUICreater.cpp">
+      <Filter>StageEditor\EditorUICreater</Filter>
+    </ClCompile>
+    <ClCompile Include="source\ObjectListWindow.cpp">
+      <Filter>StageEditor\Object\ObjectListWindow</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Dummy.cpp">
+      <Filter>StageEditor\Object\Dummy</Filter>
+    </ClCompile>
+    <ClCompile Include="source\StageDataExporter.cpp">
+      <Filter>StageEditor\StageDataExporter</Filter>
+    </ClCompile>
+    <ClCompile Include="source\EditStageSelectWindow.cpp">
+      <Filter>StageEditor\Object\EditStageSelectWindow</Filter>
+    </ClCompile>
+    <ClCompile Include="source\StageDataImporter.cpp">
+      <Filter>StageEditor\StageDataImporter</Filter>
+    </ClCompile>
+    <ClCompile Include="source\EditorCamera.cpp">
+      <Filter>StageEditor\Object\EditorCamera</Filter>
+    </ClCompile>
+    <ClCompile Include="source\XYZLine.cpp">
+      <Filter>Object\XYZLine</Filter>
+    </ClCompile>
+    <ClCompile Include="source\EditorSelectMarker.cpp">
+      <Filter>StageEditor\Object\EditorSelectMarker</Filter>
+    </ClCompile>
+    <ClCompile Include="source\DummySpike.cpp">
+      <Filter>StageEditor\Object\DummySpike</Filter>
+    </ClCompile>
+    <ClCompile Include="source\DummyWarp.cpp">
+      <Filter>StageEditor\Object\DummyWarp</Filter>
+    </ClCompile>
+    <ClCompile Include="source\DummyBlink.cpp">
+      <Filter>StageEditor\Object\DummyBlink</Filter>
+    </ClCompile>
+    <ClCompile Include="source\DummyBounce.cpp">
+      <Filter>StageEditor\Object\DummyBounce</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -124,6 +199,48 @@
     </ClInclude>
     <ClInclude Include="source\EditorButton.h">
       <Filter>StageEditor\Object\EditorButton</Filter>
+    </ClInclude>
+    <ClInclude Include="source\EditorUICreater.h">
+      <Filter>StageEditor\EditorUICreater</Filter>
+    </ClInclude>
+    <ClInclude Include="source\ObjectListWindow.h">
+      <Filter>StageEditor\Object\ObjectListWindow</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Dummy.h">
+      <Filter>StageEditor\Object\Dummy</Filter>
+    </ClInclude>
+    <ClInclude Include="source\picojson\picojson.h">
+      <Filter>picojson</Filter>
+    </ClInclude>
+    <ClInclude Include="source\StageDataExporter.h">
+      <Filter>StageEditor\StageDataExporter</Filter>
+    </ClInclude>
+    <ClInclude Include="source\EditStageSelectWindow.h">
+      <Filter>StageEditor\Object\EditStageSelectWindow</Filter>
+    </ClInclude>
+    <ClInclude Include="source\StageDataImporter.h">
+      <Filter>StageEditor\StageDataImporter</Filter>
+    </ClInclude>
+    <ClInclude Include="source\EditorCamera.h">
+      <Filter>StageEditor\Object\EditorCamera</Filter>
+    </ClInclude>
+    <ClInclude Include="source\XYZLine.h">
+      <Filter>Object\XYZLine</Filter>
+    </ClInclude>
+    <ClInclude Include="source\EditorSelectMarker.h">
+      <Filter>StageEditor\Object\EditorSelectMarker</Filter>
+    </ClInclude>
+    <ClInclude Include="source\DummySpike.h">
+      <Filter>StageEditor\Object\DummySpike</Filter>
+    </ClInclude>
+    <ClInclude Include="source\DummyWarp.h">
+      <Filter>StageEditor\Object\DummyWarp</Filter>
+    </ClInclude>
+    <ClInclude Include="source\DummyBlink.h">
+      <Filter>StageEditor\Object\DummyBlink</Filter>
+    </ClInclude>
+    <ClInclude Include="source\DummyBounce.h">
+      <Filter>StageEditor\Object\DummyBounce</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

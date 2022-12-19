@@ -76,6 +76,6 @@ void AABB2DComponent::UpdateCollision()
 		double maxOffset = 0.5;
 	}
 
-	_collision.min = { pos.x - _sizeX * minOffset,pos.y - _sizeY * maxOffset };
-	_collision.max = { pos.x + _sizeX * minOffset,pos.y+ _sizeY * maxOffset };
+	_collision.min = { pos.x - _sizeX * minOffset,pos.y - _sizeY * minOffset };
+	_collision.max = { pos.x + _sizeX * maxOffset,pos.y+ _sizeY * maxOffset };
 }

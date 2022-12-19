@@ -3,19 +3,27 @@
  * \brief  モードの実装例です。ゲーム中では使用しない。
  *
  * \author 土居将太郎
- * \date   December 2022a
+ * \date   December 2022
  *********************************************************************/
 
 
  //最初に一度だけ自動的に呼ばれる
 bool ModeTest::Initialize() {
 	if (!ModeBase::Initialize()) { return false; }
-	//テストオブジェクトの追加
-	_objectServer->Add(std::make_unique<LevelBase>());
+	////テストオブジェクトの追加
+	//_objectServer->Add(std::make_unique<TestObject>());
+	
+
+	EditorUICreater editorCreater;
+	editorCreater.CreateUI(*_objectServer);
+
+	SetUseZBuffer3D(true);
+	SetWriteZBuffer3D(true);
+
 	//カメラのセット
 	SetCameraPositionAndTarget_UpVecY({ 0.0f,50.0f,-150.0f }, { 0.0f,50.0f,0.0f });
 	//ライトの設定
-	ChangeLightTypeDir({ 0.1f,1.0f,0.5f });
+	//ChangeLightTypeDir({ 0.1f,1.0f,0.5f });
 	SetLightDifColor({2.0f, 2.0f, 2.0f, 0.0f});
 	return true;
 }
