@@ -5,9 +5,6 @@
  * \author ‚ß‚´‚µ
  * \date   December 2022
  *********************************************************************/
-#include "PrecompiledHeader.h"
-
-
 
 
 bool ModeInGame::Initialize()

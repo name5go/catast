@@ -9,6 +9,9 @@
 
 #include"appframe.h"
 
+//ƒ‰ƒCƒuƒ‰ƒŠ
+#include <sstream>
+
 #include "LevelBase.h"
 #include "Player.h"
 #include "Camera.h"

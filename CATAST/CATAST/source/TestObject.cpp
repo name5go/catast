@@ -8,7 +8,7 @@
 
 #include "PrecompiledHeader.h"
 #include "TestObject.h"
-#include <sstream>
+
 
 
 //Å‰‚Éˆê“x‚¾‚¯©“®“I‚ÉŒÄ‚Î‚ê‚é
