@@ -52,3 +52,4 @@ void TestObject::Render()
 }
 
 //テストです
+//テスト2回目です
