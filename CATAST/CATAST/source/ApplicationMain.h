@@ -1,6 +1,5 @@
-#include "PrecompiledHeader.h"
-#include "appframe.h"
 
+#pragma once
 
 class ApplicationMain : public ApplicationBase
 {
