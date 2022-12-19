@@ -1,4 +1,9 @@
 #include "StageDataExporter.h"
+#include "Dummy.h"
+#include "DummySpike.h"
+#include "DummyBounce.h"
+#include "DummyWarp.h"
+#include "DummyBlink.h"
 #include <fstream>
 
 void StageDataExporter::Export(ObjectServer& objectServer,int stageNumber)
@@ -8,7 +13,18 @@ void StageDataExporter::Export(ObjectServer& objectServer,int stageNumber)
 	for (auto&& object : objectServer.GetObjects()) {
 		picojson::object gimmick;
 		if (object->GetName() == "gimmick") {
-			gimmick.insert(std::make_pair("type",picojson::value(static_cast<double>(1))));
+			int type{ 1 };
+			if (object->CheckType<DummySpike>()) {
+				type = 2;
+			}else if (object->CheckType<DummyBounce>()) {
+				type = 3;
+			}else if (object->CheckType<DummyWarp>()) {
+				type = 4;
+			}
+			else if (object->CheckType<DummyBlink>()) {
+				type = 5;
+			}
+			gimmick.insert(std::make_pair("type",picojson::value(static_cast<double>(type))));
 			auto position=object->GetPosition();
 			gimmick.insert(std::make_pair("positionX", picojson::value(static_cast<double>(position.x))));
 			gimmick.insert(std::make_pair("positionY", picojson::value(static_cast<double>(position.y))));
