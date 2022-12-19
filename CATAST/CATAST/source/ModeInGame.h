@@ -1,14 +1,16 @@
 /*****************************************************************//**
- * \file   ModeTest.h
- * \brief  モードの実装例です。ゲーム中では使用しない。
+ * \file   ModeInGame.h
+ * \brief  インゲーム部分です
  * 
- * \author 土居将太郎
+ * \author めざし
  * \date   December 2022
  *********************************************************************/
+
 #pragma once
 
 
-class ModeTest : public ModeBase
+class ModeInGame :
+    public ModeBase
 {
 public:
 	bool Initialize()override;
@@ -16,4 +18,7 @@ public:
 	bool Update(InputManager& input)override;
 	bool Render()override;
 	bool Debug()override;
-}; 
+private:
+
+};
+
