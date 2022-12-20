@@ -8,6 +8,16 @@
 
 void EditorUICreater::CreateUI(ObjectServer& objectServer)
 {
+	bool checkAvtiveEditor{false};
+	for (auto&& object:objectServer.GetObjects()) {
+		if (object->GetName() == "editor") {
+			checkAvtiveEditor = true;
+			continue;
+		}
+	}
+	if (checkAvtiveEditor) {
+		return;
+	}
 
 	objectServer.Add(std::make_unique<XYZLine>());
 
@@ -428,6 +438,7 @@ void EditorUICreater::End(ObjectServer& objectServer, ObjectListWindow& list)
 	buttonEnd->SetVisible(false);
 	auto endFunc = [&](ObjectListWindow* list) {
 		for (auto&& object : objectServer.GetObjects()) {
+			object->MessageEvent(nullptr, "EditorClosed");
 			if (object->GetName() == "editor") {
 				object->Dead();
 			}
