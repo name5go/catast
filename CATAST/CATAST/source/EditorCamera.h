@@ -6,8 +6,7 @@
  * \date   December 2022
  *********************************************************************/
 #pragma once
-#include "appframe.h"
-class ObjectListWindow;
+
 class EditorCamera : public ObjectBase
 {
 public:

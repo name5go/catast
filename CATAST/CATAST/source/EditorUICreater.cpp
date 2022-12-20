@@ -5,21 +5,6 @@
  * \author ìyãèè´ëæòY
  * \date   December 2022
  *********************************************************************/
-#include "EditorUICreater.h"
-#include "EditorButton.h"
-#include "ObjectListWindow.h"
-#include "Dummy.h"
-#include "DummySpike.h"
-#include "DummyBounce.h"
-#include "DummyWarp.h"
-#include "DummyBlink.h"
-#include "StageDataExporter.h"
-#include "StageDataImporter.h"
-#include "EditStageSelectWindow.h"
-#include "EditorCamera.h"
-#include "XYZLine.h"
-#include "EditorSelectMarker.h"
-#include <windows.h>
 
 void EditorUICreater::CreateUI(ObjectServer& objectServer)
 {
@@ -185,7 +170,7 @@ void EditorUICreater::TransformUI(ObjectServer& objectServer, ObjectListWindow& 
 	float yPosition{ 400.0f };
 
 	auto button2 = std::make_unique<EditorButton>(list);
-	button2->SetPosition({ xPosition,yPosition+30.0f,0.0f });
+	button2->SetPosition({ xPosition + 40.0f,yPosition+30.0f,0.0f });
 	button2->SetText("X+");
 	auto addX = [&](ObjectListWindow* list) {
 		auto obj = objectServer.Get(list->GetSelectID());
@@ -197,7 +182,7 @@ void EditorUICreater::TransformUI(ObjectServer& objectServer, ObjectListWindow& 
 
 	
 	auto button3 = std::make_unique<EditorButton>(list);
-	button3->SetPosition({ xPosition+40.0f,yPosition+30.0f,0.0f });
+	button3->SetPosition({ xPosition,yPosition+30.0f,0.0f });
 	button3->SetText("X-");
 	auto subX = [&](ObjectListWindow* list) {
 		auto obj = objectServer.Get(list->GetSelectID());

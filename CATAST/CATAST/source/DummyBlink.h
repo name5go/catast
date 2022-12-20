@@ -1,5 +1,11 @@
+/*****************************************************************//**
+ * \file   DummyBlink.h
+ * \brief  仮透明ギミック
+ * 
+ * \author 土居将太郎
+ * \date   December 2022
+ *********************************************************************/
 #pragma once
-#include "appframe.h"
 class DummyBlink :
     public ObjectBase
 {

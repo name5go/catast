@@ -6,8 +6,7 @@
  * \date   December 2022
  *********************************************************************/
 #pragma once
-#include "appframe.h"
-#include "picojson/picojson.h"
+
 class StageDataImporter
 {
 public:

@@ -1,5 +1,11 @@
+/*****************************************************************//**
+ * \file   DummyBounce.h
+ * \brief  仮反射ギミック
+ * 
+ * \author 土居将太郎
+ * \date   December 2022
+ *********************************************************************/
 #pragma once
-#include "appframe.h"
 class DummyBounce : public ObjectBase
 {
 public:

@@ -1,5 +1,11 @@
+/*****************************************************************//**
+ * \file   XYZLine.h
+ * \brief  XYZ軸を表示するオブジェクト
+ * 
+ * \author 土居将太郎
+ * \date   December 2022
+ *********************************************************************/
 #pragma once
-#include "appframe.h"
 class XYZLine : public ObjectBase
 {
 public:
@@ -7,4 +13,3 @@ public:
 	void Render()override;
 private:
 };
-

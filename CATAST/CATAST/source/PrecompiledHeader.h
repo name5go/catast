@@ -10,9 +10,13 @@
 //AppFrame側のインクルード
 #include"appframe.h"
 
-//ライブラリ
+//標準ライブラリ
 #include <sstream>
 #include <functional>
+#include <fstream>
+
+//picojson
+#include "picojson/picojson.h"
 
 //メイン
 #include "ApplicationMain.h"
@@ -23,10 +27,6 @@
 //--Modes
 #include "ModeInGame.h"
 
-//Editor
-#include "ModeEditor.h"
-#include "EditorButton.h"
-
 //オブジェクト
 //--テンプレ
 #include "TestObject.h"
@@ -35,7 +35,23 @@
 //--プレイヤー
 #include "Player.h"
 #include "Camera.h"
+//--デバッグ用
+#include "XYZLine.h"
+//--仮ギミックオブジェクト
+#include "Dummy.h"
+#include "DummyBlink.h"
+#include "DummyBounce.h"
+#include "DummySpike.h"
+#include "DummyWarp.h"
 
-
-
-
+//Editor
+//--オブジェクト
+#include "EditorButton.h"
+#include "ObjectListWindow.h"
+#include "EditorCamera.h"
+#include "EditorSelectMarker.h"
+#include "EditStageSelectWindow.h"
+//--システム
+#include "EditorUICreater.h"
+#include "StageDataExporter.h"
+#include "StageDataImporter.h"

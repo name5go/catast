@@ -1,5 +1,11 @@
+/*****************************************************************//**
+ * \file   DummyWarp.h
+ * \brief  仮ワープギミック
+ * 
+ * \author 土居将太郎
+ * \date   December 2022
+ *********************************************************************/
 #pragma once
-#include "appframe.h"
 class DummyWarp : public ObjectBase
 {
 public:

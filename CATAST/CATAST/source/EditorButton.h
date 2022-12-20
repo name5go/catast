@@ -6,6 +6,7 @@
  * \date   December 2022
  *********************************************************************/
 #pragma once
+class ObjectListWindow;
 
 class EditorButton : public ObjectBase
 {

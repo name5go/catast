@@ -5,13 +5,6 @@
  * \author ìyãèè´ëæòY
  * \date   December 2022
  *********************************************************************/
-#include "ObjectListWindow.h"
-#include "Dummy.h"
-#include "DummyBlink.h"
-#include "DummyBounce.h"
-#include "DummySpike.h"
-#include "DummyWarp.h"
-#include <sstream>
 
 ObjectListWindow::ObjectListWindow()
 	:_scroll{ 0 }, _selectID{ -1 }, _sizeX{ 300 }, _sizeY{ 400 }, _selectStage{ 1 },_copy{nullptr}

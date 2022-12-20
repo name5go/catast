@@ -1,5 +1,3 @@
-#include "StageDataImporter.h"
-#include <fstream>
 
 bool StageDataImporter::Import(int stage, std::vector<GimmickData>& container)
 {

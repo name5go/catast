@@ -5,8 +5,6 @@
  * \author “y‹«‘¾˜Y
  * \date   December 2022
  *********************************************************************/
-#include "EditorSelectMarker.h"
-#include "ObjectListWindow.h"
 
 EditorSelectMarker::EditorSelectMarker(ObjectListWindow& list)
 	:_list{list}

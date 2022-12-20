@@ -1,5 +1,11 @@
+/*****************************************************************//**
+ * \file   Dummy.h
+ * \brief  仮ターゲット
+ * 
+ * \author 土居将太郎
+ * \date   December 2022
+ *********************************************************************/
 #pragma once
-#include "appframe.h"
 class Dummy : public ObjectBase
 {
 public:

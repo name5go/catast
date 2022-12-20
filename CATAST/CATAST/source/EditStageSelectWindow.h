@@ -1,6 +1,11 @@
+/*****************************************************************//**
+ * \file   EditStageSelectWindow.h
+ * \brief  編集するステージ数を選択するウィンドウ
+ * 
+ * \author 土居将太郎
+ * \date   December 2022
+ *********************************************************************/
 #pragma once
-#include "appframe.h"
-class ObjectListWindow;
 class EditStageSelectWindow : public ObjectBase
 {
 public:

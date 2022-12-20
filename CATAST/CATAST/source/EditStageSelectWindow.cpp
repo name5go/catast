@@ -1,6 +1,10 @@
-#include "EditStageSelectWindow.h"
-#include "ObjectListWindow.h"
-#include "EditorButton.h"
+/*****************************************************************//**
+ * \file   EditStageSelectWindow.cpp
+ * \brief  編集するステージ番号を選択するウィンドウ
+ * 
+ * \author 土居将太郎
+ * \date   December 2022
+ *********************************************************************/
 
 EditStageSelectWindow::EditStageSelectWindow(ObjectListWindow& list) :_list{ list }
 {

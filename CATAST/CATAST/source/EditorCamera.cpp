@@ -5,9 +5,6 @@
  * \author “y‹«‘¾˜Y
  * \date   December 2022
  *********************************************************************/
-#include "EditorCamera.h"
-#include "ObjectListWindow.h"
-#include <sstream>
 
 EditorCamera::EditorCamera(ObjectListWindow& list):_list{list}, _light{0}
 {

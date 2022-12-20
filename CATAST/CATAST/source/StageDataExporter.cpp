@@ -1,10 +1,10 @@
-#include "StageDataExporter.h"
-#include "Dummy.h"
-#include "DummySpike.h"
-#include "DummyBounce.h"
-#include "DummyWarp.h"
-#include "DummyBlink.h"
-#include <fstream>
+/*****************************************************************//**
+ * \file   StageDataExporter.cpp
+ * \brief  ステージデータのエクスポート機能を持つクラス
+ * 
+ * \author 土居将太郎
+ * \date   December 2022
+ *********************************************************************/
 
 void StageDataExporter::Export(ObjectServer& objectServer,int stageNumber)
 {

@@ -1,5 +1,12 @@
+/*****************************************************************//**
+ * \file   DummySpike.h
+ * \brief  仮一方向ギミック
+ * 
+ * \author 土居将太郎
+ * \date   December 2022
+ *********************************************************************/
 #pragma once
-#include "appframe.h"
+
 class DummySpike :
     public ObjectBase
 {
