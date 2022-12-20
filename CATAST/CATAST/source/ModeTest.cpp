@@ -13,7 +13,7 @@ bool ModeTest::Initialize() {
 	////テストオブジェクトの追加
 	//_objectServer->Add(std::make_unique<TestObject>());
 	
-
+	//editorを呼ぼ出すための機能
 	EditorUICreater editorCreater;
 	editorCreater.CreateUI(*_objectServer);
 

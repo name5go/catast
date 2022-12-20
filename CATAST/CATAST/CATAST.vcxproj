@@ -98,12 +98,12 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <PrecompiledHeaderFile>PrecompiledHeader.h</PrecompiledHeaderFile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <ForcedIncludeFiles>PrecompiledHeader.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -116,7 +116,6 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <PrecompiledHeaderFile>PrecompiledHeader.h</PrecompiledHeaderFile>
@@ -134,12 +133,12 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <PrecompiledHeaderFile>PrecompiledHeader.h</PrecompiledHeaderFile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <ForcedIncludeFiles>PrecompiledHeader.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -152,7 +151,6 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <PrecompiledHeaderFile>PrecompiledHeader.h</PrecompiledHeaderFile>
@@ -168,6 +166,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="source\ApplicationMain.cpp" />
+    <ClCompile Include="source\CameraCompornent.cpp" />
     <ClCompile Include="source\Dummy.cpp" />
     <ClCompile Include="source\DummyBlink.cpp" />
     <ClCompile Include="source\DummyBounce.cpp" />
@@ -175,6 +174,7 @@
     <ClCompile Include="source\DummySpike.cpp" />
     <ClCompile Include="source\Camera.cpp" />
     <ClCompile Include="source\LevelBase.cpp" />
+    <ClCompile Include="source\ModeConfig.cpp" />
     <ClCompile Include="source\ModeInGame.cpp" />
     <ClCompile Include="source\EditorButton.cpp" />
     <ClCompile Include="source\EditorCamera.cpp" />
@@ -197,6 +197,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\ApplicationMain.h" />
+    <ClInclude Include="source\CameraCompornent.h" />
     <ClInclude Include="source\Dummy.h" />
     <ClInclude Include="source\DummyBlink.h" />
     <ClInclude Include="source\DummyBounce.h" />
@@ -204,6 +205,7 @@
     <ClInclude Include="source\DummySpike.h" />
     <ClInclude Include="source\Camera.h" />
     <ClInclude Include="source\LevelBase.h" />
+    <ClInclude Include="source\ModeConfig.h" />
     <ClInclude Include="source\ModeInGame.h" />
     <ClInclude Include="source\EditorButton.h" />
     <ClInclude Include="source\EditorCamera.h" />

@@ -9,6 +9,7 @@
 
 //AppFrame側のインクルード
 #include"appframe.h"
+#include"../../../AppFrame/source/Object/ComponentBase.h"
 
 //標準ライブラリ
 #include <sstream>
@@ -26,6 +27,7 @@
 #include "ModeTest.h"
 //--Modes
 #include "ModeInGame.h"
+#include "ModeConfig.h"
 
 //オブジェクト
 //--テンプレ

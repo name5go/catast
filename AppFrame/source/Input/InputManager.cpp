@@ -62,6 +62,8 @@ void InputManager::Input() {
 		_padKeys[0] = GetJoypadInputState(_controllerList[i]);
 		GetJoypadAnalogInput(&_padX[i], &_padY[i], _controllerList[i]);
 	}
+	//xInputçXêV
+	GetJoypadXInputState(DX_INPUT_PAD1, &xInput);
 }
 
 void InputManager::Debug() {

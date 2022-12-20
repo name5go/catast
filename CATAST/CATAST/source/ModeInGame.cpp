@@ -33,7 +33,7 @@ bool ModeInGame::Update(InputManager& input)
 	ModeBase::Update(input);
 	_objectServer->Update(input);
 
-	return false;
+	return true;
 }
 
 bool ModeInGame::Render()
@@ -41,12 +41,12 @@ bool ModeInGame::Render()
 	ModeBase::Render();
 
 	_objectServer->Render();
-	return false;
+	return true;
 }
 
 bool ModeInGame::Debug()
 {
 	ModeBase::Debug();
 	_objectServer->Debug();
-	return false;
+	return true;
 }
