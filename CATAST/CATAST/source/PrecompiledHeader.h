@@ -29,6 +29,10 @@
 #include "ModeInGame.h"
 #include "ModeConfig.h"
 
+//Game.sln側に作ったコンポーネント
+//--カメラ
+#include"CameraComponent.h"
+
 //オブジェクト
 //--テンプレ
 #include "TestObject.h"
@@ -36,6 +40,7 @@
 #include "LevelBase.h"
 //--プレイヤー
 #include "Player.h"
+//--カメラ
 #include "Camera.h"
 //--デバッグ用
 #include "XYZLine.h"

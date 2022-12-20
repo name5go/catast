@@ -197,7 +197,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\ApplicationMain.h" />
-    <ClInclude Include="source\CameraCompornent.h" />
+    <ClInclude Include="source\CameraComponent.h" />
     <ClInclude Include="source\Dummy.h" />
     <ClInclude Include="source\DummyBlink.h" />
     <ClInclude Include="source\DummyBounce.h" />

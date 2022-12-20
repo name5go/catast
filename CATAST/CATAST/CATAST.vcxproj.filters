@@ -100,10 +100,10 @@
     <Filter Include="StageEditor\Object\DummyBounce">
       <UniqueIdentifier>{2e7bb0ba-e6e2-4776-b1df-981c03061230}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Compornent">
+    <Filter Include="Component">
       <UniqueIdentifier>{1309f378-2ee0-43f7-bffb-9a00a31cb6d7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Compornent\CameraCompornent">
+    <Filter Include="Component\CameraCompornent">
       <UniqueIdentifier>{3ded40d6-7975-4e33-b2a2-e12806361853}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -178,7 +178,7 @@
       <Filter>Mode\ModeConfig</Filter>
     </ClCompile>
     <ClCompile Include="source\CameraCompornent.cpp">
-      <Filter>Compornent\CameraCompornent</Filter>
+      <Filter>Component\CameraCompornent</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -254,8 +254,8 @@
     <ClInclude Include="source\ModeConfig.h">
       <Filter>Mode\ModeConfig</Filter>
     </ClInclude>
-    <ClInclude Include="source\CameraCompornent.h">
-      <Filter>Compornent\CameraCompornent</Filter>
+    <ClInclude Include="source\CameraComponent.h">
+      <Filter>Component\CameraCompornent</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -84,26 +84,16 @@
 		virtual bool GetPadBack(InputState state, int controllerNumber = 0) { return GetPadButton(PAD_INPUT_11, state, controllerNumber); }
 		virtual bool GetPadStart(InputState state, int controllerNumber = 0) { return GetPadButton(PAD_INPUT_12, state, controllerNumber); }
 
-		//トリガー入力の強弱、戻り値はトリガー( 0～255 )
-		virtual int GetR2Power() { return xInput.RightTrigger; }
-		virtual int GetL2Power() { return xInput.LeftTrigger; }
+		//トリガー入力の強弱を取得。戻り値はトリガー( 0～255 )
+		virtual int GetR2Power() { return _xInput.RightTrigger; }
+		virtual int GetL2Power() { return _xInput.LeftTrigger; }
 
-		//スティックの判定。戻り値のVECTORは{x軸( -32768 ～ 32767 ),y軸( -32768 ～ 32767 ),スティックが押し込まれたか(左ならマイナス方向、右ならプラス方向への変化)}
-		//が、z値については同じ場所に数値が格納されているらしくL3R3同時押しだと0になってしまい判定できなくなるので使うことはないと思われる。
+		//スティックの判定。戻り値のVECTORは{x軸( -32768 ～ 32767 ),y軸( -32768 ～ 32767 ),zはスティックが押し込まれたか(左ならマイナス方向、右ならプラス方向への変化)}
+		//だが、z値については同じ場所に数値が格納されているらしく、L3とR3同時押しだと0になってしまい判定できなくなるので使うことはないと思われる。
 		//Rスティック
-		virtual VECTOR GetStickR()
-		{ 
-		VECTOR Stick = { 0,0,0 };
-		Stick.x = xInput.ThumbRX; Stick.y = xInput.ThumbRY; Stick.z = xInput.Buttons[XINPUT_BUTTON_RIGHT_THUMB];
-		return Stick;
-		}
+		std::pair<short, short> GetStickR() { return { _xInput.ThumbRX ,_xInput.ThumbRY }; }
 		//Lスティック
-		virtual VECTOR GetStickL() 
-		{
-			VECTOR Stick={0,0,0};
-			Stick.x = xInput.ThumbLX; Stick.y = xInput.ThumbLY; Stick.z = xInput.Buttons[XINPUT_BUTTON_LEFT_THUMB];
-			return Stick;
-		}
+		std::pair<short, short> GetStickR() { return { _xInput.ThumbLY ,_xInput.ThumbLY }; }
 
 		//マウス位置取得
 		std::pair<int, int> GetMouseXY() { return { _mouseX,_mouseY }; };
@@ -119,7 +109,7 @@
 		void SetMouseY(int set) { _mouseY = set; }
 
 	protected:
-		XINPUT_STATE xInput;//XINPUTで取得した値を格納
+		XINPUT_STATE _xInput;//XINPUTで取得した値を格納、Input内部で更新
 
 		char _keyboardKeys[256], _oldKeyboardKeys[256];
 		int _mouseX, _mouseY;

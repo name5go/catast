@@ -8,8 +8,20 @@
 #pragma once
 
 
-class CameraCompornent :
-    public CompornentBase
+class CameraComponent:public ComponentBase
 {
+public:
+	CameraComponent();
+	~CameraComponent();
+	virtual bool Init();
+	virtual void Update();
+	virtual void Render();
+	virtual void Debug();
+
+protected:
+	ObjectBase* _parent;
+
+private:
+
 };
 
