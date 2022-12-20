@@ -13,6 +13,12 @@ bool ModeInGame::Initialize()
 	//オブジェクトの追加
 	_objectServer->Add(std::make_unique<LevelBase>());
 
+	_objectServer->Add(std::make_unique<ElectronicBoard>());
+	SetUseZBuffer3D(true);
+	SetWriteZBuffer3D(true);
+	EditorUICreater editorCreater;
+	editorCreater.CreateUI(*_objectServer);
+
 	//_objectServer->Add(std::make_unique<LevelBase>());
 	//カメラのセット
 	SetCameraPositionAndTarget_UpVecY({ 0.0f,50.0f,-150.0f }, { 0.0f,50.0f,0.0f });

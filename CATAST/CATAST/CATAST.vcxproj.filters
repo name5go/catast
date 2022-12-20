@@ -100,6 +100,9 @@
     <Filter Include="StageEditor\Object\DummyBounce">
       <UniqueIdentifier>{2e7bb0ba-e6e2-4776-b1df-981c03061230}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Object\ElectronicBoard">
+      <UniqueIdentifier>{e3c28f49-4db8-45e1-84b6-c3082dbebf84}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\ApplicationMain.cpp">
@@ -117,9 +120,9 @@
     <ClCompile Include="source\LevelBase.cpp">
       <Filter>Object\LevelBase</Filter>
     </ClCompile>
-      <ClCompile Include="source\Player.cpp">
+    <ClCompile Include="source\Player.cpp">
       <Filter>Object\Player</Filter>
-          </ClCompile>
+    </ClCompile>
     <ClCompile Include="source\ModeInGame.cpp">
       <Filter>Mode\ModeInGame</Filter>
     </ClCompile>
@@ -168,6 +171,9 @@
     <ClCompile Include="source\DummyBounce.cpp">
       <Filter>StageEditor\Object\DummyBounce</Filter>
     </ClCompile>
+    <ClCompile Include="source\ElectronicBoard.cpp">
+      <Filter>Object\ElectronicBoard</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\ApplicationMain.h">
@@ -193,9 +199,6 @@
     </ClInclude>
     <ClInclude Include="source\PrecompiledHeader.h">
       <Filter>Application\PrecompiledHeader</Filter>
-    </ClInclude>
-    <ClInclude Include="source\ModeEditor.h">
-      <Filter>StageEditor\ModeEdit</Filter>
     </ClInclude>
     <ClInclude Include="source\EditorButton.h">
       <Filter>StageEditor\Object\EditorButton</Filter>
@@ -241,6 +244,9 @@
     </ClInclude>
     <ClInclude Include="source\DummyBounce.h">
       <Filter>StageEditor\Object\DummyBounce</Filter>
+    </ClInclude>
+    <ClInclude Include="source\ElectronicBoard.h">
+      <Filter>Object\ElectronicBoard</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

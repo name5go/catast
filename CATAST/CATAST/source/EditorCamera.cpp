@@ -22,6 +22,7 @@ void EditorCamera::Init()
 	_position = { 0.0f,50.0f,-150.0f };
 
 	_light=CreateDirLightHandle(_rotation);
+	//_light = CreatePointLightHandle(_position, 150, 0.0f, 0.002f, 0.0f);
 }
 
 void EditorCamera::Update(InputManager& input)
@@ -68,6 +69,9 @@ void EditorCamera::Update(InputManager& input)
 		VECTOR worldPosEnd{ ConvScreenPosToWorldPos(screenPosEnd) };
 
 		for (auto&& object : _mode->GetObjectServer()->GetObjects()) {
+			if (object->GetName() != "gimmick") {
+				continue;
+			}
 			auto mv1Ptr=object->GetComponent<MV1Component>();
 			if (mv1Ptr == nullptr) {
 				continue;
@@ -83,6 +87,7 @@ void EditorCamera::Update(InputManager& input)
 	}
 
 	SetLightDirectionHandle(_light, forward);
+	SetLightPositionHandle(_light, _position);
 }
 
 void EditorCamera::Render()
