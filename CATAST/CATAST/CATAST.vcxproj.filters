@@ -117,9 +117,9 @@
     <ClCompile Include="source\LevelBase.cpp">
       <Filter>Object\LevelBase</Filter>
     </ClCompile>
-      <ClCompile Include="source\Player.cpp">
+    <ClCompile Include="source\Player.cpp">
       <Filter>Object\Player</Filter>
-          </ClCompile>
+    </ClCompile>
     <ClCompile Include="source\ModeInGame.cpp">
       <Filter>Mode\ModeInGame</Filter>
     </ClCompile>
@@ -193,9 +193,6 @@
     </ClInclude>
     <ClInclude Include="source\PrecompiledHeader.h">
       <Filter>Application\PrecompiledHeader</Filter>
-    </ClInclude>
-    <ClInclude Include="source\ModeEditor.h">
-      <Filter>StageEditor\ModeEdit</Filter>
     </ClInclude>
     <ClInclude Include="source\EditorButton.h">
       <Filter>StageEditor\Object\EditorButton</Filter>

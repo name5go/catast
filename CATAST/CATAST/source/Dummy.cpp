@@ -1,7 +1,8 @@
+#include "Dummy.h"
 /*****************************************************************//**
  * \file   Dummy.cpp
  * \brief  仮ターゲット
- * 
+ *
  * \author 土居将太郎
  * \date   December 2022
  *********************************************************************/
@@ -22,4 +23,15 @@ void Dummy::Update(InputManager& input)
 void Dummy::Render()
 {
 	ObjectBase::Render();
+}
+
+bool Dummy::MessageEvent(ObjectBase* obj, std::string msg)
+{
+	if (obj->CheckType<Player>() && msg == "hit") {
+		auto selfModelHandle =GetComponent<MV1Component>()->GetModelHandle();
+		if (obj->GetComponent<CollisionComponent>()->Intersect(selfModelHandle)) {
+			Dead();
+		}
+	}
+	return false;
 }

@@ -55,6 +55,9 @@
     <Filter Include="Utillity\2DAABB">
       <UniqueIdentifier>{c7cf2569-7cf9-43c5-b5af-03a368fc6b5d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Component\CollisionComponent">
+      <UniqueIdentifier>{95ccf118-fbed-42d6-921f-e9db2acdb242}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\Application\ApplicationBase.cpp">
@@ -101,6 +104,9 @@
     </ClCompile>
     <ClCompile Include="source\Mode\ModeBase.cpp">
       <Filter>ModeBase</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Object\CollisionComponent.cpp">
+      <Filter>Component\CollisionComponent</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -149,6 +155,9 @@
     </ClInclude>
     <ClInclude Include="source\Mode\ModeBase.h">
       <Filter>ModeBase</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Object\CollisionComponent.h">
+      <Filter>Component\CollisionComponent</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

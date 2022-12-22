@@ -12,5 +12,6 @@ public:
 	void Init()override;
 	void Update(InputManager&)override;
 	void Render()override;
+	bool MessageEvent(ObjectBase* obj, std::string msg)override;
 private:
 };

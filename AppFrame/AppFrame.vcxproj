@@ -175,6 +175,7 @@
     <ClCompile Include="source\Object\MV1Component.cpp" />
     <ClCompile Include="source\Object\ObjectBase.cpp" />
     <ClCompile Include="source\Object\ObjectServer.cpp" />
+    <ClCompile Include="source\Object\CollisionComponent.cpp" />
     <ClCompile Include="source\Resource\ImageServer.cpp" />
     <ClCompile Include="source\Resource\ModelServer.cpp" />
     <ClCompile Include="source\Utility\AABB2D.cpp" />
@@ -193,6 +194,7 @@
     <ClInclude Include="source\Object\MV1Component.h" />
     <ClInclude Include="source\Object\ObjectBase.h" />
     <ClInclude Include="source\Object\ObjectServer.h" />
+    <ClInclude Include="source\Object\CollisionComponent.h" />
     <ClInclude Include="source\Resource\ImageServer.h" />
     <ClInclude Include="source\Resource\ModelServer.h" />
     <ClInclude Include="source\Utility\AABB2D.h" />

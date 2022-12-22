@@ -22,6 +22,14 @@ MV1Component::~MV1Component()
 	MV1DeleteModel(_modelHandle);
 }
 
+bool MV1Component::Init()
+{
+	MV1SetScale(_modelHandle, _parent->GetScale());
+	MV1SetRotationXYZ(_modelHandle, _parent->GetRotation());
+	MV1SetPosition(_modelHandle, _parent->GetPosition());
+	return true;
+}
+
 void MV1Component::Update()
 {
 	if (_attahIndex == -1) {
@@ -38,8 +46,9 @@ void MV1Component::Render()
 	MV1SetScale(_modelHandle, _parent->GetScale());
 	MV1SetRotationXYZ(_modelHandle, _parent->GetRotation());
 	MV1SetPosition(_modelHandle, _parent->GetPosition());
-	MV1DrawModel(_modelHandle);
 	MV1SetAttachAnimTime(_modelHandle, _attahIndex, _playTime);
+	MV1DrawModel(_modelHandle);
+
 }
 void MV1Component::Debug()
 {

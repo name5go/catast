@@ -11,6 +11,7 @@
 #include "Object/ComponentBase.h"
 #include "Object/MV1Component.h"
 #include "Object/AABB2DComponent.h"
+#include "Object/CollisionComponent.h"
 #include "Object/ObjectServer.h"
 #include "Resource/ImageServer.h"
 #include "Resource/ModelServer.h"

@@ -13,6 +13,7 @@
 	public:
 		MV1Component(int modelHandle);
 		~MV1Component();
+		bool Init()override;
 		void Update()override;
 		void Render()override;
 		void Debug()override;
