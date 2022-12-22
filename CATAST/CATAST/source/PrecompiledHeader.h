@@ -15,12 +15,15 @@
 #include <sstream>
 #include <functional>
 #include <fstream>
+#include <math.h>
 
 //picojson
 #include "picojson/picojson.h"
 
 //メイン
 #include "ApplicationMain.h"
+//--計算用
+#include"Math.h"
 
 //ゲームモード
 //--テンプレ
@@ -32,6 +35,8 @@
 //Game.sln側に作ったコンポーネント
 //--カメラ
 #include"CameraComponent.h"
+//--インプット
+#include"XInputComponent.h"
 
 //オブジェクト
 //--テンプレ

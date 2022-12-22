@@ -106,6 +106,9 @@
     <Filter Include="Component\CameraCompornent">
       <UniqueIdentifier>{3ded40d6-7975-4e33-b2a2-e12806361853}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Component\InputComponent">
+      <UniqueIdentifier>{40066eb0-6452-40ba-b7b9-23025988fa6d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\ApplicationMain.cpp">
@@ -177,8 +180,11 @@
     <ClCompile Include="source\ModeConfig.cpp">
       <Filter>Mode\ModeConfig</Filter>
     </ClCompile>
-    <ClCompile Include="source\CameraCompornent.cpp">
+    <ClCompile Include="source\CameraComponent.cpp">
       <Filter>Component\CameraCompornent</Filter>
+    </ClCompile>
+    <ClCompile Include="source\XInputComponent.cpp">
+      <Filter>Component\InputComponent</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -256,6 +262,9 @@
     </ClInclude>
     <ClInclude Include="source\CameraComponent.h">
       <Filter>Component\CameraCompornent</Filter>
+    </ClInclude>
+    <ClInclude Include="source\XInputComponent.h">
+      <Filter>Component\InputComponent</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

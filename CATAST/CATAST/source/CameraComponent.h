@@ -1,25 +1,26 @@
-/*****************************************************************//**
- * \file   CameraCompornent.h
- * \brief  カメラ制御用のコンポーネント
- * 
- * \author めざし
- * \date   December 2022
- *********************************************************************/
 #pragma once
 
+//カメラモードFps頭部カメラ、Tps0プレイヤーの俯瞰視点、デバッグ用？のフリーカメラ
+enum class CameraType
+{
+	Fps,
+	Tps,
+	FreeCamera
+};
 
-class CameraComponent:public ComponentBase
+class CameraComponent :
+    public ComponentBase
 {
 public:
-	CameraComponent();
+	CameraComponent(float cameraDistance);
 	~CameraComponent();
-	virtual bool Init();
-	virtual void Update();
-	virtual void Render();
-	virtual void Debug();
-
+	void Update()override;
+	void Render()override;
+	void Debug()override;
+	std::pair<VECTOR, VECTOR>GetCameraPosTarget() { return{ _cameraPosition,_cameraTarget }; }
 protected:
-	ObjectBase* _parent;
+	//カメラ座標、カメラターゲット、カメラと親との距離ベクトル
+	VECTOR _cameraPosition, _cameraTarget,_cameraDistance;
 
 private:
 

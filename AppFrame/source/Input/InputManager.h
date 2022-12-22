@@ -19,14 +19,6 @@
 		Released
 	};
 
-	enum class XState
-	{
-		StickL,
-		StickR,
-		TrgL,
-		TrgR
-	};
-
 	class InputManager {
 	public:
 		InputManager();
@@ -85,15 +77,14 @@
 		virtual bool GetPadStart(InputState state, int controllerNumber = 0) { return GetPadButton(PAD_INPUT_12, state, controllerNumber); }
 
 		//トリガー入力の強弱を取得。戻り値はトリガー( 0～255 )
-		virtual int GetR2Power() { return _xInput.RightTrigger; }
-		virtual int GetL2Power() { return _xInput.LeftTrigger; }
+		virtual int GetR2Power() { return _xinput.RightTrigger; }
+		virtual int GetL2Power() { return _xinput.LeftTrigger; }
 
-		//スティックの判定。戻り値のVECTORは{x軸( -32768 ～ 32767 ),y軸( -32768 ～ 32767 ),zはスティックが押し込まれたか(左ならマイナス方向、右ならプラス方向への変化)}
-		//だが、z値については同じ場所に数値が格納されているらしく、L3とR3同時押しだと0になってしまい判定できなくなるので使うことはないと思われる。
+		//スティックの判定。戻り値{x軸( -32768 ～ 32767 ),y軸( -32768 ～ 32767 )}
 		//Rスティック
-		std::pair<short, short> GetStickR() { return { _xInput.ThumbRX ,_xInput.ThumbRY }; }
+		std::pair<short, short> GetStickR() { return { _xinput.ThumbRX ,_xinput.ThumbRY }; }
 		//Lスティック
-		std::pair<short, short> GetStickR() { return { _xInput.ThumbLY ,_xInput.ThumbLY }; }
+		std::pair<short, short> GetStickL() { return { _xinput.ThumbLY ,_xinput.ThumbLY }; }
 
 		//マウス位置取得
 		std::pair<int, int> GetMouseXY() { return { _mouseX,_mouseY }; };
@@ -109,7 +100,7 @@
 		void SetMouseY(int set) { _mouseY = set; }
 
 	protected:
-		XINPUT_STATE _xInput;//XINPUTで取得した値を格納、Input内部で更新
+		XINPUT_STATE _xinput;//XINPUTで取得した値を格納、Input内部で更新
 
 		char _keyboardKeys[256], _oldKeyboardKeys[256];
 		int _mouseX, _mouseY;
