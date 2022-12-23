@@ -173,7 +173,7 @@
     <ClCompile Include="source\DummyWarp.cpp" />
     <ClCompile Include="source\DummySpike.cpp" />
     <ClCompile Include="source\Camera.cpp" />
-    <ClCompile Include="source\XInputComponent.cpp" />
+    <ClCompile Include="source\XInputMoveComponent.cpp" />
     <ClCompile Include="source\LevelBase.cpp" />
     <ClCompile Include="source\ModeConfig.cpp" />
     <ClCompile Include="source\ModeInGame.cpp" />
@@ -205,7 +205,7 @@
     <ClInclude Include="source\DummyWarp.h" />
     <ClInclude Include="source\DummySpike.h" />
     <ClInclude Include="source\Camera.h" />
-    <ClInclude Include="source\XInputComponent.h" />
+    <ClInclude Include="source\XInputMoveComponent.h" />
     <ClInclude Include="source\LevelBase.h" />
     <ClInclude Include="source\ModeConfig.h" />
     <ClInclude Include="source\ModeInGame.h" />

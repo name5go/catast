@@ -27,19 +27,21 @@ void Player::Init()
 	float cameraDistance = 3.0;
 	auto cameraComponent = std::make_unique<CameraComponent>(cameraDistance);
 	AddComponent(std::move(cameraComponent));
-
-	auto xinputComponent = std::make_unique<XInputComponent>();
-	AddComponent(std::move(xinputComponent));
+	//動く時の速度と動き方を指定
+	float movePower=0.5f;
+	auto xinputMoveComponent = std::make_unique<XInputMoveComponent>(movePower,Moving::As_3D);
+	AddComponent(std::move(xinputMoveComponent));
 
 	_rotation = { 0.0f,Math::ToRadians(180.0f),0.0f};
 }
 
 void Player::Update(InputManager&input)
 {
+
 	//ここで_componentsに登録しているコンポーネントのUpdateを呼んでいる。つまり3Dモデルの位置やアニメーションが更新される。
 	ObjectBase::Update(input);
-
-	std::pair<float,float> stick_L= GetComponent<XInputComponent>()->GetStickState(Stick::L);
+	/*
+	std::pair<float,float> stick_L= GetComponent<XInputComponent>()->GetStickState(Side::L);
 	stick_L.first *= 0.1;
 
 	VECTOR v;
@@ -56,7 +58,7 @@ void Player::Update(InputManager&input)
 	{
 		_position = VAdd(_position, v);
 	}
-
+	*/
 }
 
 void Player::Render()

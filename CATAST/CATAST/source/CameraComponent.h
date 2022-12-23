@@ -18,10 +18,12 @@ public:
 	void Render()override;
 	void Debug()override;
 	std::pair<VECTOR, VECTOR>GetCameraPosTarget() { return{ _cameraPosition,_cameraTarget }; }
+	bool ChanegeAvaiavleCamera(bool available) { availableCam = available; return true; }
+
 protected:
 	//カメラ座標、カメラターゲット、カメラと親との距離ベクトル
 	VECTOR _cameraPosition, _cameraTarget,_cameraDistance;
-
+	bool availableCam;
 private:
 
 };

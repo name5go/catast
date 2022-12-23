@@ -16,6 +16,8 @@
 #include <functional>
 #include <fstream>
 #include <math.h>
+#include <iostream>
+#include <utility>
 
 //picojson
 #include "picojson/picojson.h"
@@ -36,7 +38,7 @@
 //--カメラ
 #include"CameraComponent.h"
 //--インプット
-#include"XInputComponent.h"
+#include"XInputMoveComponent.h"
 
 //オブジェクト
 //--テンプレ
