@@ -11,14 +11,14 @@ enum class Side
 	R
 };
 
-enum class Moving
+enum class MoveType
 {
 	As_3D,
 	As_2D,
 	None
 };
 
-enum class CameraStatus
+enum class CameraType
 {
 	FPS,
 	TPS,
@@ -31,13 +31,20 @@ class XInputMoveComponent :
     public ComponentBase
 {
 public://std::pair<float,int> MovePowerAndType
-	XInputMoveComponent(float power,Moving type);
+	XInputMoveComponent(float power,MoveType mov,CameraType cam);
 	~XInputMoveComponent();
 
 	bool Init()override;
 	void Update()override;
 	void Render()override;
 	void Debug()override;
+
+	//アクター制御
+	inline void ActorMove();
+	inline void CameraMove();
+
+	bool ChangeCameraType(CameraType cam) { _cam = cam; return true; }
+	bool ChangeMoveType(MoveType mov) { _mov = mov; return true; }
 
 	//スティックの入力方向と感度を取得。LR.first=length　LR.second=rad
 	std::pair<float, float>GetStickState(Side LR) { return GetStickLenRad(LR); }
@@ -49,7 +56,8 @@ protected:
 private:
 	//動く際の力の大きさとどう動くか
 	float _movePower;
-	Moving _movetype;
+	MoveType _mov;
+	CameraType _cam;
 
 	XINPUT_STATE _xinput;//XINPUTで取得した値を格納、Input内部で更新
 	std::pair<float, float>GetStickLenRad(Side LR);

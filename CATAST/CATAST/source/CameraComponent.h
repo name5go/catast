@@ -1,12 +1,13 @@
 #pragma once
 
 //カメラモードFps頭部カメラ、Tps0プレイヤーの俯瞰視点、デバッグ用？のフリーカメラ
+/*
 enum class CameraType
 {
 	Fps,
 	Tps,
 	FreeCamera
-};
+};*/
 
 class CameraComponent :
     public ComponentBase

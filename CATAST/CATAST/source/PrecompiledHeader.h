@@ -47,8 +47,6 @@
 #include "LevelBase.h"
 //--プレイヤー
 #include "Player.h"
-//--カメラ
-#include "Camera.h"
 //--デバッグ用
 #include "XYZLine.h"
 //--仮ギミックオブジェクト

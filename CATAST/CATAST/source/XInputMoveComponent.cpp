@@ -6,10 +6,11 @@
  * \date   December 2022
  *********************************************************************/
 
-XInputMoveComponent::XInputMoveComponent(float power,Moving type)
+XInputMoveComponent::XInputMoveComponent(float power,MoveType mov,CameraType cam)
 {
 	_movePower = power;
-	_movetype = type;
+	_mov = mov;
+	_cam = cam;
 }
 
 XInputMoveComponent::~XInputMoveComponent()
@@ -18,9 +19,6 @@ XInputMoveComponent::~XInputMoveComponent()
 
 bool XInputMoveComponent::Init()
 {
-
-
-
 	return true;
 }
 
@@ -28,6 +26,64 @@ void XInputMoveComponent::Update()
 {
 	//xInputçXêV
 	GetJoypadXInputState(DX_INPUT_PAD1, &_xinput);
+
+	ActorMove();
+	CameraMove();
+}
+
+void XInputMoveComponent::ActorMove()
+{
+	std::pair<float, float> stick_L = GetStickState(Side::L);
+	stick_L.first *= 0.1;
+	/*
+
+
+VECTOR v;
+v =
+{ stick_L.first * static_cast<float>(std::cos(stick_L.second)),0.0f ,stick_L.first * static_cast<float>(std::sin(stick_L.second)) };
+if (input.GetPadL1(InputState::Hold))
+{
+	v =
+	{ stick_L.first * static_cast<float>(std::cos(stick_L.second)),stick_L.first * static_cast<float>(std::sin(stick_L.second)) ,0.0f };
+}
+
+float length_min = 0.02;
+if (stick_L.first > length_min)
+{
+	_position = VAdd(_position, v);
+}
+*/
+
+
+	switch (_mov)
+	{
+	case MoveType::None:
+		break;
+	case MoveType::As_3D:
+		break;
+	case MoveType::As_2D:
+		break;
+	default:
+		break;
+	}
+}
+
+void XInputMoveComponent::CameraMove()
+{
+	std::pair<float, float> stick_L = GetStickState(Side::R);
+	switch (_cam)
+	{
+	case CameraType::FPS:
+		break;
+	case CameraType::TPS:
+		break;
+	case CameraType::FREE_CAMERA:
+		break;
+	case CameraType::NO_MOVE:
+		break;
+	default:
+		break;
+	}
 }
 
 void XInputMoveComponent::Render()

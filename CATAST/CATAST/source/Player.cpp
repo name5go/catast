@@ -29,7 +29,7 @@ void Player::Init()
 	AddComponent(std::move(cameraComponent));
 	//動く時の速度と動き方を指定
 	float movePower=0.5f;
-	auto xinputMoveComponent = std::make_unique<XInputMoveComponent>(movePower,Moving::As_3D);
+	auto xinputMoveComponent = std::make_unique<XInputMoveComponent>(movePower,MoveType::As_3D,CameraType::TPS);
 	AddComponent(std::move(xinputMoveComponent));
 
 	_rotation = { 0.0f,Math::ToRadians(180.0f),0.0f};
@@ -40,25 +40,7 @@ void Player::Update(InputManager&input)
 
 	//ここで_componentsに登録しているコンポーネントのUpdateを呼んでいる。つまり3Dモデルの位置やアニメーションが更新される。
 	ObjectBase::Update(input);
-	/*
-	std::pair<float,float> stick_L= GetComponent<XInputComponent>()->GetStickState(Side::L);
-	stick_L.first *= 0.1;
 
-	VECTOR v;
-	v =
-	{ stick_L.first * static_cast<float>(std::cos(stick_L.second)),0.0f ,stick_L.first * static_cast<float>(std::sin(stick_L.second)) };
-	if (input.GetPadL1(InputState::Hold))
-	{
-		v =
-		{ stick_L.first * static_cast<float>(std::cos(stick_L.second)),stick_L.first * static_cast<float>(std::sin(stick_L.second)) ,0.0f };
-	}
-
-	float length_min = 0.02;
-	if (stick_L.first > length_min)
-	{
-		_position = VAdd(_position, v);
-	}
-	*/
 }
 
 void Player::Render()
