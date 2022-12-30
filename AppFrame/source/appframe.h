@@ -15,5 +15,8 @@
 #include "Object/ObjectServer.h"
 #include "Resource/ImageServer.h"
 #include "Resource/ModelServer.h"
+#include "Resource/FontServer.h"
 #include "Utility/AABB2D.h"
+#include "Utility/CharacterCodeConvert.h"
+#include "Utility/ShiftJISChecker.h"
 #include "Mode/ModeServer.h"

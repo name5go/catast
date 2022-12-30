@@ -100,6 +100,9 @@
     <Filter Include="StageEditor\Object\DummyBounce">
       <UniqueIdentifier>{2e7bb0ba-e6e2-4776-b1df-981c03061230}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Object\MessageWindow">
+      <UniqueIdentifier>{e55848c9-3ef7-4ced-90de-d2f2551ffeff}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\ApplicationMain.cpp">
@@ -167,6 +170,9 @@
     </ClCompile>
     <ClCompile Include="source\DummyBounce.cpp">
       <Filter>StageEditor\Object\DummyBounce</Filter>
+    </ClCompile>
+    <ClCompile Include="source\MessageWindow.cpp">
+      <Filter>Object\MessageWindow</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -238,6 +244,9 @@
     </ClInclude>
     <ClInclude Include="source\DummyBounce.h">
       <Filter>StageEditor\Object\DummyBounce</Filter>
+    </ClInclude>
+    <ClInclude Include="source\MessageWindow.h">
+      <Filter>Object\MessageWindow</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,13 +1,13 @@
 /*****************************************************************//**
  * \file   PreCompiled.h
  * \brief  プリコンパイルドヘッダー
- * 
+ *
  * \author めざし
  * \date   December 2022
  *********************************************************************/
 #pragma once
 
-//AppFrame側のインクルード
+ //AppFrame側のインクルード
 #include"appframe.h"
 
 //標準ライブラリ
@@ -32,6 +32,7 @@
 #include "TestObject.h"
 //--ステージ
 #include "LevelBase.h"
+
 //--プレイヤー
 #include "Player.h"
 #include "Camera.h"
@@ -43,11 +44,13 @@
 #include "DummyBounce.h"
 #include "DummySpike.h"
 #include "DummyWarp.h"
+//--UI
+#include "MessageWindow.h"
 
 //Editor
 //--オブジェクト
-#include "EditorButton.h"
 #include "ObjectListWindow.h"
+#include "EditorButton.h"
 #include "EditorCamera.h"
 #include "EditorSelectMarker.h"
 #include "EditStageSelectWindow.h"

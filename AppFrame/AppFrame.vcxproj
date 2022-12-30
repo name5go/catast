@@ -176,9 +176,12 @@
     <ClCompile Include="source\Object\ObjectBase.cpp" />
     <ClCompile Include="source\Object\ObjectServer.cpp" />
     <ClCompile Include="source\Object\CollisionComponent.cpp" />
+    <ClCompile Include="source\Resource\FontServer.cpp" />
     <ClCompile Include="source\Resource\ImageServer.cpp" />
     <ClCompile Include="source\Resource\ModelServer.cpp" />
     <ClCompile Include="source\Utility\AABB2D.cpp" />
+    <ClCompile Include="source\Utility\CharacterCodeConvert.cpp" />
+    <ClCompile Include="source\Utility\ShiftJISChecker.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\appframe.h" />
@@ -195,9 +198,12 @@
     <ClInclude Include="source\Object\ObjectBase.h" />
     <ClInclude Include="source\Object\ObjectServer.h" />
     <ClInclude Include="source\Object\CollisionComponent.h" />
+    <ClInclude Include="source\Resource\FontServer.h" />
     <ClInclude Include="source\Resource\ImageServer.h" />
     <ClInclude Include="source\Resource\ModelServer.h" />
     <ClInclude Include="source\Utility\AABB2D.h" />
+    <ClInclude Include="source\Utility\CharacterCodeConvert.h" />
+    <ClInclude Include="source\Utility\ShiftJISChecker.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

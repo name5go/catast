@@ -58,6 +58,15 @@
     <Filter Include="Component\CollisionComponent">
       <UniqueIdentifier>{95ccf118-fbed-42d6-921f-e9db2acdb242}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Utillity\CharacterCodeConvert">
+      <UniqueIdentifier>{a6216631-7a4e-47e7-b635-98faaad0eeb7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utillity\ShiftJISChecker">
+      <UniqueIdentifier>{19040c9e-599a-4930-af6f-10cd4c04e024}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource\FontServer">
+      <UniqueIdentifier>{d22d91e7-9f7d-41b6-9bdf-f9ba14cf1424}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\Application\ApplicationBase.cpp">
@@ -107,6 +116,15 @@
     </ClCompile>
     <ClCompile Include="source\Object\CollisionComponent.cpp">
       <Filter>Component\CollisionComponent</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Utility\CharacterCodeConvert.cpp">
+      <Filter>Utillity\CharacterCodeConvert</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Utility\ShiftJISChecker.cpp">
+      <Filter>Utillity\ShiftJISChecker</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Resource\FontServer.cpp">
+      <Filter>Resource\FontServer</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -158,6 +176,15 @@
     </ClInclude>
     <ClInclude Include="source\Object\CollisionComponent.h">
       <Filter>Component\CollisionComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Utility\CharacterCodeConvert.h">
+      <Filter>Utillity\CharacterCodeConvert</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Utility\ShiftJISChecker.h">
+      <Filter>Utillity\ShiftJISChecker</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Resource\FontServer.h">
+      <Filter>Resource\FontServer</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

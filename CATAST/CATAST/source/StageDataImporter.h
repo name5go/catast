@@ -19,9 +19,9 @@ public:
 
 	/**
 	 * \brief res/Stageフォルダ内のJsonファイルを読み込み、containerにデータを入れる関数
-	 * \param stage 読み込むファイルの番号
-	 * \param container 情報を入れるコンテナ
+	 * \param stage 読み込むステージの番号
+	 * \param objectServer 読み込むオブジェクトサーバー
 	 * \return 読み込み出来たらtrueを返す
 	 */
-	bool Import(int stage,std::vector<GimmickData>& container);
+	bool Import(int stage, ObjectServer& objectServer);
 };

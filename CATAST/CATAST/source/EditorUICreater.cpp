@@ -343,41 +343,8 @@ void EditorUICreater::FileUI(ObjectServer& objectServer, ObjectListWindow& list)
 			}
 		}
 		StageDataImporter importer;
-		std::vector<StageDataImporter::GimmickData> gimmickData;
-		importer.Import(list->GetSelectStage(), gimmickData);
-		for (auto&& gimmick : gimmickData) {
-			if (gimmick.Type == 1) {
-				auto target = std::make_unique<Dummy>();
-				target->SetPosition(gimmick.Position);
-				target->SetRotation(gimmick.Rotation);
-				target->SetScale(gimmick.Scale);
-				objectServer.Add(std::move(target));
-			}else if (gimmick.Type == 2) {
-				auto target = std::make_unique<DummySpike>();
-				target->SetPosition(gimmick.Position);
-				target->SetRotation(gimmick.Rotation);
-				target->SetScale(gimmick.Scale);
-				objectServer.Add(std::move(target));
-			}else if (gimmick.Type == 3) {
-				auto target = std::make_unique<DummyBounce>();
-				target->SetPosition(gimmick.Position);
-				target->SetRotation(gimmick.Rotation);
-				target->SetScale(gimmick.Scale);
-				objectServer.Add(std::move(target));
-			}else if (gimmick.Type == 4) {
-				auto target = std::make_unique<DummyWarp>();
-				target->SetPosition(gimmick.Position);
-				target->SetRotation(gimmick.Rotation);
-				target->SetScale(gimmick.Scale);
-				objectServer.Add(std::move(target));
-			}else if (gimmick.Type == 5) {
-				auto target = std::make_unique<DummyBlink>();
-				target->SetPosition(gimmick.Position);
-				target->SetRotation(gimmick.Rotation);
-				target->SetScale(gimmick.Scale);
-				objectServer.Add(std::move(target));
-			}
-		}
+		importer.Import(list->GetSelectStage(), objectServer);
+
 	};
 	button12->SetActivateFunction(loadFile);
 	objectServer.Add(std::move(button12));
