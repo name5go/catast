@@ -32,7 +32,7 @@
 #include "TestObject.h"
 //--ステージ
 #include "LevelBase.h"
-
+#include "ElectronicBoard.h"
 //--プレイヤー
 #include "Player.h"
 #include "Camera.h"

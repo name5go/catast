@@ -13,6 +13,13 @@ bool ModeInGame::Initialize()
 	//オブジェクトの追加
 	_objectServer->Add(std::make_unique<LevelBase>());
 
+	_objectServer->Add(std::make_unique<ElectronicBoard>());
+	SetUseZBuffer3D(true);
+	SetWriteZBuffer3D(true);
+	EditorUICreater editorCreater;
+	editorCreater.CreateUI(*_objectServer);
+
+	//_objectServer->Add(std::make_unique<LevelBase>());
 
 	EditorUICreater editor;
 	editor.CreateUI(*_objectServer);

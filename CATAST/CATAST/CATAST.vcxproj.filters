@@ -100,6 +100,9 @@
     <Filter Include="StageEditor\Object\DummyBounce">
       <UniqueIdentifier>{2e7bb0ba-e6e2-4776-b1df-981c03061230}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Object\ElectronicBoard">
+      <UniqueIdentifier>{e3c28f49-4db8-45e1-84b6-c3082dbebf84}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Object\MessageWindow">
       <UniqueIdentifier>{e55848c9-3ef7-4ced-90de-d2f2551ffeff}</UniqueIdentifier>
     </Filter>
@@ -174,6 +177,9 @@
     <ClCompile Include="source\MessageWindow.cpp">
       <Filter>Object\MessageWindow</Filter>
     </ClCompile>
+    <ClCompile Include="source\ElectronicBoard.cpp">
+      <Filter>Object\ElectronicBoard</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\ApplicationMain.h">
@@ -247,6 +253,9 @@
     </ClInclude>
     <ClInclude Include="source\MessageWindow.h">
       <Filter>Object\MessageWindow</Filter>
+    </ClInclude>
+    <ClInclude Include="source\ElectronicBoard.h">
+      <Filter>Object\ElectronicBoard</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

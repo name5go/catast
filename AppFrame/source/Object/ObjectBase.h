@@ -27,6 +27,7 @@ public:
 	virtual void Update(InputManager& input);
 	virtual void Render();
 	virtual void Debug();
+
 	VECTOR GetPosition() { return _position; }
 	VECTOR GetRotation() { return _rotation; }
 	VECTOR GetScale() { return _scale; }
@@ -37,6 +38,7 @@ public:
 	MATRIX GetRotationMatrix() {return _rotationMatrix;}
 	MATRIX GetScaleMatrix() { return _scaleMatrix; }
 	MATRIX GetTransform() { return _transrom; }
+
 	virtual bool IsDead() { return _dead; }
 	virtual void Dead() { _dead = true; }
 
@@ -48,6 +50,8 @@ public:
 	void SetID(int value) { _id = value; }
 	std::string GetName() { return _name; }
 	void SetName(std::string string) { _name = string; }
+	ModeBase* GetMode() { return _mode; }
+	void SetMode(ModeBase* mode) { _mode = mode; }
 
 	void AddComponent(std::unique_ptr<ComponentBase> component);
 
@@ -91,8 +95,7 @@ public:
 	/**  \brief オブジェクトへメッセージを送信*/
 	virtual void SendMessageOneObject(ObjectBase* destination,std::string message);
 
-	ModeBase* GetMode() { return _mode; }
-	void SetMode(ModeBase* mode) { _mode = mode; }
+
 protected:
 	bool _visible;//Renderで描画するかの判定に使用
 
