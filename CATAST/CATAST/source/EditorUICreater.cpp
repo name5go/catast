@@ -8,8 +8,8 @@
 
 void EditorUICreater::CreateUI(ObjectServer& objectServer)
 {
-	bool checkAvtiveEditor{false};
-	for (auto&& object:objectServer.GetObjects()) {
+	bool checkAvtiveEditor{ false };
+	for (auto&& object : objectServer.GetObjects()) {
 		if (object->GetName() == "editor") {
 			checkAvtiveEditor = true;
 			continue;
@@ -47,12 +47,12 @@ void EditorUICreater::CreateUI(ObjectServer& objectServer)
 
 
 	AddObjectUI(objectServer, *list);
-	TransformUI(objectServer,*list);
+	TransformUI(objectServer, *list);
 	FileUI(objectServer, *list);
 	End(objectServer, *list);
 
 	auto stageSelect = std::make_unique<EditStageSelectWindow>(*list);
-	stageSelect->SetPosition({0.0f, 30.0f, 0.0f});
+	stageSelect->SetPosition({ 0.0f, 30.0f, 0.0f });
 	stageSelect->SetVisible(false);
 	objectServer.Add(std::move(stageSelect));
 
@@ -60,7 +60,7 @@ void EditorUICreater::CreateUI(ObjectServer& objectServer)
 	deleteButton->SetPosition({ 1400.0f,0.0f,0.0f });
 	deleteButton->SetText("選択オブジェクト削除");
 	auto deleteObject = [&](ObjectListWindow* list) {
-		auto deletePtr =objectServer.Get(list->GetSelectID());
+		auto deletePtr = objectServer.Get(list->GetSelectID());
 		if (deletePtr != nullptr) {
 			deletePtr->Dead();
 		}
@@ -73,7 +73,7 @@ void EditorUICreater::CreateUI(ObjectServer& objectServer)
 	button13->SetText("ステージ選択");
 	button13->SetUnpushedMessage("stageSelectOff");
 	auto selectFileOn = [&](ObjectListWindow* list) {
-		for (auto&& object:objectServer.GetObjects()) {
+		for (auto&& object : objectServer.GetObjects()) {
 			object->MessageEvent(nullptr, "stageSelectOn");
 			object->MessageEvent(nullptr, "fileOff");
 			object->MessageEvent(nullptr, "systemOff");
@@ -99,7 +99,7 @@ void EditorUICreater::DeleteUI(ObjectServer& objectServer)
 
 void EditorUICreater::AddObjectUI(ObjectServer& objectServer, ObjectListWindow& list)
 {
-	float x{182.0f};
+	float x{ 182.0f };
 
 	auto buttonSystem = std::make_unique<EditorButton>(list);
 	buttonSystem->SetPosition({ x,0.0f,0.0f });
@@ -180,7 +180,7 @@ void EditorUICreater::TransformUI(ObjectServer& objectServer, ObjectListWindow& 
 	float yPosition{ 400.0f };
 
 	auto button2 = std::make_unique<EditorButton>(list);
-	button2->SetPosition({ xPosition + 40.0f,yPosition+30.0f,0.0f });
+	button2->SetPosition({ xPosition + 40.0f,yPosition + 30.0f,0.0f });
 	button2->SetText("X+");
 	auto addX = [&](ObjectListWindow* list) {
 		auto obj = objectServer.Get(list->GetSelectID());
@@ -190,9 +190,9 @@ void EditorUICreater::TransformUI(ObjectServer& objectServer, ObjectListWindow& 
 	button2->SetActivateFunction(addX);
 	objectServer.Add(std::move(button2));
 
-	
+
 	auto button3 = std::make_unique<EditorButton>(list);
-	button3->SetPosition({ xPosition,yPosition+30.0f,0.0f });
+	button3->SetPosition({ xPosition,yPosition + 30.0f,0.0f });
 	button3->SetText("X-");
 	auto subX = [&](ObjectListWindow* list) {
 		auto obj = objectServer.Get(list->GetSelectID());
@@ -201,9 +201,13 @@ void EditorUICreater::TransformUI(ObjectServer& objectServer, ObjectListWindow& 
 	};
 	button3->SetActivateFunction(subX);
 	objectServer.Add(std::move(button3));
-	
+
+	auto textBoxX = std::make_unique<EditorTextBox>(list);
+	textBoxX->SetPosition({ xPosition + 80.0f,yPosition + 30.0f,0.0f });
+	objectServer.Add(std::move(textBoxX));
+
 	auto button4 = std::make_unique<EditorButton>(list);
-	button4->SetPosition({ xPosition+40.0f,yPosition+50.0f,0.0f });
+	button4->SetPosition({ xPosition + 40.0f,yPosition + 50.0f,0.0f });
 	button4->SetText("Y+");
 	auto addY = [&](ObjectListWindow* list) {
 		auto obj = objectServer.Get(list->GetSelectID());
@@ -214,7 +218,7 @@ void EditorUICreater::TransformUI(ObjectServer& objectServer, ObjectListWindow& 
 	objectServer.Add(std::move(button4));
 
 	auto button5 = std::make_unique<EditorButton>(list);
-	button5->SetPosition({ xPosition,yPosition+50.0f,0.0f });
+	button5->SetPosition({ xPosition,yPosition + 50.0f,0.0f });
 	button5->SetText("Y-");
 	auto subY = [&](ObjectListWindow* list) {
 		auto obj = objectServer.Get(list->GetSelectID());
@@ -225,7 +229,7 @@ void EditorUICreater::TransformUI(ObjectServer& objectServer, ObjectListWindow& 
 	objectServer.Add(std::move(button5));
 
 	auto button6 = std::make_unique<EditorButton>(list);
-	button6->SetPosition({ xPosition+40.0f,yPosition+70.0f,0.0f });
+	button6->SetPosition({ xPosition + 40.0f,yPosition + 70.0f,0.0f });
 	button6->SetText("Z+");
 	auto addZ = [&](ObjectListWindow* list) {
 		auto obj = objectServer.Get(list->GetSelectID());
@@ -236,7 +240,7 @@ void EditorUICreater::TransformUI(ObjectServer& objectServer, ObjectListWindow& 
 	objectServer.Add(std::move(button6));
 
 	auto button7 = std::make_unique<EditorButton>(list);
-	button7->SetPosition({ xPosition,yPosition+70.0f,0.0f });
+	button7->SetPosition({ xPosition,yPosition + 70.0f,0.0f });
 	button7->SetText("Z-");
 	auto subZ = [&](ObjectListWindow* list) {
 		auto obj = objectServer.Get(list->GetSelectID());
@@ -247,7 +251,7 @@ void EditorUICreater::TransformUI(ObjectServer& objectServer, ObjectListWindow& 
 	objectServer.Add(std::move(button7));
 
 	auto button8 = std::make_unique<EditorButton>(list);
-	button8->SetPosition({ xPosition,yPosition+90.0f,0.0f });
+	button8->SetPosition({ xPosition,yPosition + 90.0f,0.0f });
 	button8->SetText("+X方向");
 	auto rotX = [&](ObjectListWindow* list) {
 		auto obj = objectServer.Get(list->GetSelectID());
@@ -258,7 +262,7 @@ void EditorUICreater::TransformUI(ObjectServer& objectServer, ObjectListWindow& 
 	objectServer.Add(std::move(button8));
 
 	auto Xminus = std::make_unique<EditorButton>(list);
-	Xminus->SetPosition({ xPosition+60.0f,yPosition + 90.0f,0.0f });
+	Xminus->SetPosition({ xPosition + 60.0f,yPosition + 90.0f,0.0f });
 	Xminus->SetText("-X方向");
 	auto rotXminus = [&](ObjectListWindow* list) {
 		auto obj = objectServer.Get(list->GetSelectID());
@@ -269,7 +273,7 @@ void EditorUICreater::TransformUI(ObjectServer& objectServer, ObjectListWindow& 
 	objectServer.Add(std::move(Xminus));
 
 	auto button9 = std::make_unique<EditorButton>(list);
-	button9->SetPosition({ xPosition,yPosition+110.0f,0.0f });
+	button9->SetPosition({ xPosition,yPosition + 110.0f,0.0f });
 	button9->SetText("+Y方向");
 	auto rotY = [&](ObjectListWindow* list) {
 		auto obj = objectServer.Get(list->GetSelectID());
@@ -291,7 +295,7 @@ void EditorUICreater::TransformUI(ObjectServer& objectServer, ObjectListWindow& 
 	objectServer.Add(std::move(Yminus));
 
 	auto button10 = std::make_unique<EditorButton>(list);
-	button10->SetPosition({ xPosition,yPosition+130.0f,0.0f });
+	button10->SetPosition({ xPosition,yPosition + 130.0f,0.0f });
 	button10->SetText("+Z方向");
 	auto rotZ = [&](ObjectListWindow* list) {
 		auto obj = objectServer.Get(list->GetSelectID());
@@ -302,7 +306,7 @@ void EditorUICreater::TransformUI(ObjectServer& objectServer, ObjectListWindow& 
 	objectServer.Add(std::move(button10));
 
 	auto Zminus = std::make_unique<EditorButton>(list);
-	Zminus->SetPosition({ xPosition+60,yPosition + 130.0f,0.0f });
+	Zminus->SetPosition({ xPosition + 60,yPosition + 130.0f,0.0f });
 	Zminus->SetText("-Z方向");
 	auto rotZminus = [&](ObjectListWindow* list) {
 		auto obj = objectServer.Get(list->GetSelectID());
@@ -311,7 +315,7 @@ void EditorUICreater::TransformUI(ObjectServer& objectServer, ObjectListWindow& 
 	};
 	Zminus->SetActivateFunction(rotZminus);
 	objectServer.Add(std::move(Zminus));
-	
+
 }
 
 void EditorUICreater::FileUI(ObjectServer& objectServer, ObjectListWindow& list)

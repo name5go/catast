@@ -54,6 +54,7 @@
 #include "EditorCamera.h"
 #include "EditorSelectMarker.h"
 #include "EditStageSelectWindow.h"
+#include "EditorTextBox.h"
 //--ƒVƒXƒeƒ€
 #include "EditorUICreater.h"
 #include "StageDataExporter.h"

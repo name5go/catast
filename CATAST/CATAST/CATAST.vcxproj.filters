@@ -106,6 +106,9 @@
     <Filter Include="Object\MessageWindow">
       <UniqueIdentifier>{e55848c9-3ef7-4ced-90de-d2f2551ffeff}</UniqueIdentifier>
     </Filter>
+    <Filter Include="StageEditor\Object\EditorTextBox">
+      <UniqueIdentifier>{ae73be33-526b-4d73-b87c-c9bb31d136d7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\ApplicationMain.cpp">
@@ -179,6 +182,9 @@
     </ClCompile>
     <ClCompile Include="source\ElectronicBoard.cpp">
       <Filter>Object\ElectronicBoard</Filter>
+    </ClCompile>
+    <ClCompile Include="source\EditorTextBox.cpp">
+      <Filter>StageEditor\Object\EditorTextBox</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -256,6 +262,9 @@
     </ClInclude>
     <ClInclude Include="source\ElectronicBoard.h">
       <Filter>Object\ElectronicBoard</Filter>
+    </ClInclude>
+    <ClInclude Include="source\EditorTextBox.h">
+      <Filter>StageEditor\Object\EditorTextBox</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
