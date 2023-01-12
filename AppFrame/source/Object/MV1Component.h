@@ -40,6 +40,7 @@ private:
 	void CheckAnimFunction(float preTime,float nowTime);
 
 	int _modelHandle;
+	int _animIndex;
 	int _attahIndex;
 	float _playTime, _totalTime;
 	float _animSpeed;

@@ -49,9 +49,12 @@ public:
 
 	static void SetBGMVolume(float volume);
 	static void SetSEVolume(float volume);
-
+	static float GetBGMVolume() { return _bgmVolume; }
+	static float GetSEVolume() { return _seVolume; }
 private:
 	static std::unordered_map<std::string, int> _mapBGM;
 	static std::unordered_map<std::string, int> _mapSE;
 	static std::unordered_map<std::string, int> _mapDefaultVolume;
+	static float _bgmVolume;
+	static float _seVolume;
 };

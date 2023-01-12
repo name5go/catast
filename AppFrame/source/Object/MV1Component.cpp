@@ -15,8 +15,12 @@ MV1Component::MV1Component(int modelHandle)
 	, _attahIndex{ -1 }
 	, _playTime{ 0.0f }
 	, _totalTime{ 0.0f }
-	, _animSpeed{ 1.0f }
+	, _animSpeed{ 60.0f }
+	, _animIndex{-1}
 {
+	int animNumber = MV1GetAnimNum(_modelHandle);
+	_animFunction.clear();
+	_animFunction.resize(animNumber);
 }
 
 MV1Component::~MV1Component()
@@ -37,7 +41,7 @@ void MV1Component::Update()
 	if (_attahIndex == -1) {
 		return;
 	}
-	auto preTime = _playTime;
+	float preTime = _playTime;
 	_playTime += _parent->GetMode()->GetStepTime() * 0.001f * _animSpeed;
 	CheckAnimFunction(preTime, _playTime);
 	if (_playTime >= _totalTime) {
@@ -70,8 +74,8 @@ void MV1Component::SetModelHandle(int modelHandle)
 void MV1Component::SetAnimation(int index)
 {
 	MV1DetachAnim(_modelHandle, _attahIndex);
-	_attahIndex = index;
-	_attahIndex = MV1AttachAnim(_modelHandle, _attahIndex, -1, false);
+	_animIndex = index;
+	_attahIndex = MV1AttachAnim(_modelHandle, _animIndex, -1, true);
 	_totalTime = MV1GetAttachAnimTotalTime(_modelHandle, _attahIndex);
 	_playTime = 0.0f;
 }
@@ -91,9 +95,9 @@ void MV1Component::AddAnimFunction(int animIndex, float activateTime, std::funct
 
 void MV1Component::CheckAnimFunction(float preTime, float nowTime)
 {
-	for (auto&& func : _animFunction[_attahIndex]) {
+	for (auto&& func : _animFunction[_animIndex]) {
 		if (func.first > preTime && func.first <= nowTime) {
-			func.second;
+			func.second();
 		}
 	}
 }

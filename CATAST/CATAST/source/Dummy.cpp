@@ -27,10 +27,14 @@ void Dummy::Render()
 
 bool Dummy::MessageEvent(ObjectBase* obj, std::string msg)
 {
+	if (obj == nullptr) {
+		return false;
+	}
 	if (obj->CheckType<Player>() && msg == "hit") {
 		auto selfModelHandle =GetComponent<MV1Component>()->GetModelHandle();
 		if (obj->GetComponent<CollisionComponent>()->Intersect(selfModelHandle)) {
 			Dead();
+			return true;
 		}
 	}
 	return false;

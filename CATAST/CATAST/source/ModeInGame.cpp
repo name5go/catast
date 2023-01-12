@@ -14,6 +14,7 @@ bool ModeInGame::Initialize()
 	_objectServer->Add(std::make_unique<LevelBase>());
 
 	_objectServer->Add(std::make_unique<ElectronicBoard>());
+	_objectServer->Add(std::make_unique<TestObject>());
 	SetUseZBuffer3D(true);
 	SetWriteZBuffer3D(true);
 	EditorUICreater editorCreater;
@@ -44,16 +45,6 @@ bool ModeInGame::Update(InputManager& input)
 	ModeBase::Update(input);
 	_objectServer->Update(input);
 
-	if (input.GetKeyA(InputState::Pressed)) {
-		int test = SoundServer::LoadBGM("res/test.mp3");
-		_soundManager.PlayBGM(test, DX_PLAYTYPE_LOOP);
-	}
-	if (input.GetKeyS(InputState::Pressed)) {
-		_soundManager.SetBGMVolume(_soundManager.GetBGMVolume()-0.1f);
-	}
-	if (input.GetKeyD(InputState::Pressed)) {
-		_soundManager.SetBGMVolume(_soundManager.GetBGMVolume() + 0.1f);
-	}
 	return false;
 }
 

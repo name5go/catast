@@ -19,6 +19,5 @@ public:
 	bool Render()override;
 	bool Debug()override;
 private:
-	SoundManager _soundManager;
 };
 

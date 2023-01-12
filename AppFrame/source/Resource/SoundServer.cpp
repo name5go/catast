@@ -12,6 +12,8 @@
 std::unordered_map<std::string, int> SoundServer::_mapBGM;
 std::unordered_map<std::string, int> SoundServer::_mapSE;
 std::unordered_map<std::string, int> SoundServer::_mapDefaultVolume;
+float SoundServer::_bgmVolume = 1.0f;
+float SoundServer::_seVolume = 1.0f;
 
 void SoundServer::Init() {
 	_mapBGM.clear();
@@ -88,17 +90,20 @@ int SoundServer::LoadBGM(std::string filename)
 	return bgm;
 }
 
-void SoundServer::SetBGMVolume(float value)
+void SoundServer::SetBGMVolume(float volume)
 {
+	_bgmVolume = volume;
 	for (auto&& bgm : _mapBGM) {
-		int nextVolume=_mapDefaultVolume[bgm.first] * value;
-		ChangeVolumeSoundMem(nextVolume,bgm.second);
+		int nextVolume = _mapDefaultVolume[bgm.first] * _bgmVolume;
+		ChangeVolumeSoundMem(nextVolume, bgm.second);
 	}
 }
 
-void SoundServer::SetSEVolume(float value)
+void SoundServer::SetSEVolume(float volume)
 {
+	_seVolume = volume;
 	for (auto&& se : _mapSE) {
-		ChangeVolumeSoundMem(_mapDefaultVolume[se.first] * value, se.second);
+		int nextVolume = _mapDefaultVolume[se.first] * _seVolume;
+		ChangeVolumeSoundMem(_mapDefaultVolume[se.first] * _seVolume, se.second);
 	}
 }
