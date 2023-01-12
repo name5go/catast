@@ -67,6 +67,12 @@
     <Filter Include="Resource\FontServer">
       <UniqueIdentifier>{d22d91e7-9f7d-41b6-9bdf-f9ba14cf1424}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource\SoundServer">
+      <UniqueIdentifier>{373b541e-5052-4618-bfac-20d49fafa1e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sound">
+      <UniqueIdentifier>{82fe5964-d241-45ee-b662-48c1481f38c1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\Application\ApplicationBase.cpp">
@@ -125,6 +131,12 @@
     </ClCompile>
     <ClCompile Include="source\Resource\FontServer.cpp">
       <Filter>Resource\FontServer</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Resource\SoundServer.cpp">
+      <Filter>Resource\SoundServer</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Sound\SoundManager.cpp">
+      <Filter>Sound</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -185,6 +197,12 @@
     </ClInclude>
     <ClInclude Include="source\Resource\FontServer.h">
       <Filter>Resource\FontServer</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Resource\SoundServer.h">
+      <Filter>Resource\SoundServer</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Sound\SoundManager.h">
+      <Filter>Sound</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -179,6 +179,8 @@
     <ClCompile Include="source\Resource\FontServer.cpp" />
     <ClCompile Include="source\Resource\ImageServer.cpp" />
     <ClCompile Include="source\Resource\ModelServer.cpp" />
+    <ClCompile Include="source\Resource\SoundServer.cpp" />
+    <ClCompile Include="source\Sound\SoundManager.cpp" />
     <ClCompile Include="source\Utility\AABB2D.cpp" />
     <ClCompile Include="source\Utility\CharacterCodeConvert.cpp" />
     <ClCompile Include="source\Utility\ShiftJISChecker.cpp" />
@@ -201,6 +203,8 @@
     <ClInclude Include="source\Resource\FontServer.h" />
     <ClInclude Include="source\Resource\ImageServer.h" />
     <ClInclude Include="source\Resource\ModelServer.h" />
+    <ClInclude Include="source\Resource\SoundServer.h" />
+    <ClInclude Include="source\Sound\SoundManager.h" />
     <ClInclude Include="source\Utility\AABB2D.h" />
     <ClInclude Include="source\Utility\CharacterCodeConvert.h" />
     <ClInclude Include="source\Utility\ShiftJISChecker.h" />
